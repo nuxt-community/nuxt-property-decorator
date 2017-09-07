@@ -1,0 +1,45 @@
+{
+  "name": "nuxt-property-decorator",
+  "version": "1.0.0",
+  "description": "property decorators for Nuxt",
+  "main": "lib/nuxt-property-decorator.umd.js",
+  "keywords": [
+    "vue",
+    "typescript",
+    "nuxt",
+    "decorator"
+  ],
+  "author": "kaorun343",
+  "license": "MIT",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "build": "tsc -p src/tsconfig.json",
+    "build:umd": "rollup -c",
+    "test": "tsc -p test/tsconfig.json && ava test/decorator.spec.js"
+  },
+  "files": [
+    "lib"
+  ],
+  "devDependencies": {
+    "@types/node": "^7.0.5",
+    "ava": "^0.19.1",
+    "rollup": "^0.45.2",
+    "typescript": "^2.4.1",
+    "vue": "^2.2.1"
+  },
+  "typings": "./lib/nuxt-property-decorator.d.ts",
+  "dependencies": {
+    "nuxt-class-component": "^1.0.3",
+    "reflect-metadata": "^0.1.9"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidbernal/nuxt-property-decorator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/davidbernal/nuxt-property-decorator/issues"
+  },
+  "homepage": "https://github.com/davidbernal/nuxt-property-decorator#readme"
+}

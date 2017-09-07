@@ -12,6 +12,7 @@
   "author": "davidbernal",
   "license": "MIT",
   "directories": {
+    "lib": "lib",
     "test": "test"
   },
   "scripts": {

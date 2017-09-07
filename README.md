@@ -1,4 +1,4 @@
-# Vue Property Decorator
+# Nuxt Property Decorator
 
 [![npm](https://img.shields.io/npm/v/nuxt-property-decorator.svg)](https://www.npmjs.com/package/nuxt-property-decorator)
 

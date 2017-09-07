@@ -31,7 +31,6 @@
   },
   "typings": "./lib/nuxt-property-decorator.d.ts",
   "dependencies": {
-    "nuxt-class-component": "^1.0.3",
     "reflect-metadata": "^0.1.9",
     "vue-class-component": "^5.0.2"
   },

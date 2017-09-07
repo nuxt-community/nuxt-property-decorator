@@ -4,7 +4,7 @@ import test from 'ava'
 
 test('@Emit decorator test', t => {
 
-  @Component
+  @Component({})
   class Child extends Vue {
     count = 0
 

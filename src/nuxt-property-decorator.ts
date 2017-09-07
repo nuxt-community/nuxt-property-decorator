@@ -1,12 +1,26 @@
 /** vue-property-decorator verson 5.3.0 MIT LICENSE copyright 2017 kaorun343 */
 
 'use strict'
-import Vue, { PropOptions, WatchOptions } from 'vue'
-const Component = require('nuxt-class-component');
-const { createDecorator } = require('nuxt-class-component');
-import 'reflect-metadata'
 
-console.log(createDecorator);
+import Vue, { PropOptions, WatchOptions } from 'vue'
+import Component, { createDecorator } from 'vue-class-component';
+
+Component.registerHooks([
+  'beforeRouteEnter',
+  'beforeRouteLeave',
+  'asyncData',
+  'fetch',
+  'head',
+  'middleware',
+  'layout',
+  'transition',
+  'scrollToTop',
+  'validate'
+])
+
+// const Component = require('nuxt-class-component');
+// const { createDecorator } = require('nuxt-class-component');
+import 'reflect-metadata'
 
 export type Constructor = {
   new (...args: any[]): any

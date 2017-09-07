@@ -2,8 +2,11 @@
 
 'use strict'
 import Vue, { PropOptions, WatchOptions } from 'vue'
-import Component, { createDecorator } from 'nuxt-class-component'
+const Component = require('nuxt-class-component');
+const { createDecorator } = require('nuxt-class-component');
 import 'reflect-metadata'
+
+console.log(createDecorator);
 
 export type Constructor = {
   new (...args: any[]): any
@@ -15,7 +18,7 @@ export type Constructor = {
  * @return PropertyDecorator
  */
 export function Inject(key?: string | symbol): PropertyDecorator {
-  return createDecorator((componentOptions, k) => {
+  return createDecorator((componentOptions: any, k: any) => {
     if (typeof componentOptions.inject === 'undefined') {
       componentOptions.inject = {}
     }
@@ -31,7 +34,7 @@ export function Inject(key?: string | symbol): PropertyDecorator {
  * @return PropertyDecorator | void
  */
 export function Provide(key?: string | symbol): PropertyDecorator {
-  return createDecorator((componentOptions, k) => {
+  return createDecorator((componentOptions: any, k: any) => {
     let provide: any = componentOptions.provide
     if (typeof provide !== 'function' || !provide.managed) {
       const original = componentOptions.provide
@@ -56,7 +59,7 @@ export function Model(event?: string, options: (PropOptions | Constructor[] | Co
     if (!Array.isArray(options) && typeof (options as PropOptions).type === 'undefined') {
       (options as PropOptions).type = Reflect.getMetadata('design:type', target, key)
     }
-    createDecorator((componentOptions, k) => {
+    createDecorator((componentOptions: any, k: any) => {
       (componentOptions.props || (componentOptions.props = {}) as any)[k] = options
     	componentOptions.model = { prop: k, event: event || k }
     })(target, key)
@@ -73,7 +76,7 @@ export function Prop(options: (PropOptions | Constructor[] | Constructor) = {}):
     if (!Array.isArray(options) && typeof (options as PropOptions).type === 'undefined') {
       (options as PropOptions).type = Reflect.getMetadata('design:type', target, key)
     }
-    createDecorator((componentOptions, k) => {
+    createDecorator((componentOptions: any, k: any) => {
       (componentOptions.props || (componentOptions.props = {}) as any)[k] = options
     })(target, key)
   }
@@ -88,7 +91,7 @@ export function Prop(options: (PropOptions | Constructor[] | Constructor) = {}):
 export function Watch(path: string, options: WatchOptions = {}): MethodDecorator {
   const { deep = false, immediate = false } = options
 
-  return createDecorator((componentOptions, handler) => {
+  return createDecorator((componentOptions: any, handler: any) => {
     if (typeof componentOptions.watch !== 'object') {
       componentOptions.watch = Object.create(null)
     }

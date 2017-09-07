@@ -1,8 +1,8 @@
 # Vue Property Decorator
 
-[![npm](https://img.shields.io/npm/v/vue-property-decorator.svg)](https://www.npmjs.com/package/vue-property-decorator)
+[![npm](https://img.shields.io/npm/v/nuxt-property-decorator.svg)](https://www.npmjs.com/package/nuxt-property-decorator)
 
-This library fully depends on [vue-class-component](https://github.com/vuejs/vue-class-component).
+This library fully depends on [nuxt-class-component](https://github.com/johnlindquist/nuxt-class-component).
 
 ## License
 
@@ -11,7 +11,7 @@ MIT License
 ## Install
 
 ```bash
-npm i -S vue-property-decorator
+npm i -S nuxt-property-decorator
 ```
 
 ## Usage
@@ -23,10 +23,10 @@ There are 6 decorators:
 * `@Prop`
 * `@Provide`
 * `@Watch`
-* `@Component` (**exported from** `vue-class-component`)
+* `@Component` (**exported from** `nuxt-class-component`)
 
 ```typescript
-import { Component, Inject, Model, Prop, Vue, Watch } from 'vue-property-decorator'
+import { Component, Inject, Model, Prop, Vue, Watch } from 'nuxt-property-decorator'
 
 const s = Symbol('baz')
 
@@ -123,6 +123,3 @@ export const MyComponent = Vue.extend({
 As you can see at `propA` and `propB`, the type can be inferred automatically when it's a simple type. For more complex types like enums you do need to specify it specifically.
 Also this library needs to have `emitDecoratorMetadata` set to `true` for this to work.
 
-## See also
-
-[vuex-class](https://github.com/ktsn/vuex-class/)

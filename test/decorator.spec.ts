@@ -2,6 +2,7 @@ import * as Vue from 'vue'
 import { Component, Emit, Inject, Model, Prop, Provide, Watch } from '../src/nuxt-property-decorator'
 import test from 'ava'
 
+// Fix me pls
 test('@Emit decorator test', t => {
 
   @Component({})

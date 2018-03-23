@@ -2,7 +2,7 @@
   "name": "nuxt-property-decorator",
   "version": "1.1.1",
   "description": "property decorators for Nuxt (https://github.com/kaorun343/vue-property-decorator)",
-  "main": "lib/nuxt-property-decorator.umd",
+  "main": "lib/nuxt-property-decorator.js",
   "keywords": [
     "vue",
     "typescript",

@@ -1,6 +1,6 @@
 {
   "name": "nuxt-property-decorator",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "description": "property decorators for Nuxt (https://github.com/davidbernal/nuxt-property-decorator)",
   "main": "lib/nuxt-property-decorator.js",
   "keywords": [
@@ -16,7 +16,7 @@
     "test": "test"
   },
   "scripts": {
-    "build": "tsc -p src/tsconfig.json && rollup -c",
+    "build": "tsc -p src/tsconfig.json",
     "build:umd": "rollup -c",
     "test": "tsc -p test/tsconfig.json && ava test/decorator.spec.js"
   },

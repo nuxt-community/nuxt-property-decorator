@@ -16,7 +16,7 @@
     "test": "test"
   },
   "scripts": {
-    "build": "tsc -p src/tsconfig.json",
+    "build": "tsc -p src/tsconfig.json && rollup -c",
     "build:umd": "rollup -c",
     "test": "tsc -p test/tsconfig.json && ava test/decorator.spec.js"
   },

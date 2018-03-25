@@ -1,3 +1,8 @@
+# Collaborators/Owner wanted! 
+
+I created this lib for a small fast test. Now this library is used for some people, and I don't have enough time to support and I'm not using, so is difficult for me find out bugs.
+If you are interested for keep it, contact me.
+
 # Nuxt Property Decorator
 
 [![npm](https://img.shields.io/npm/v/nuxt-property-decorator.svg)](https://www.npmjs.com/package/nuxt-property-decorator)

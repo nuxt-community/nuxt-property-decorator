@@ -1,7 +1,7 @@
 {
   "name": "nuxt-property-decorator",
   "version": "1.1.4",
-  "description": "property decorators for Nuxt (https://github.com/davidbernal/nuxt-property-decorator)",
+  "description": "Property decorators for Nuxt",
   "main": "lib/nuxt-property-decorator.umd.js",
   "keywords": [
     "vue",
@@ -10,37 +10,68 @@
     "decorator"
   ],
   "author": "davidbernal",
+  "contributors": [
+    {
+      "name": "Tony BRIET",
+      "email": "tony.briet@viacesi.fr"
+    }
+  ],
   "license": "MIT",
+  "files": [
+    "lib"
+  ],
   "directories": {
     "lib": "lib",
     "test": "test"
   },
   "scripts": {
-    "build": "tsc -p src/tsconfig.json && npm run build:umd",
-    "build:umd": "rollup -c",
-    "test": "tsc -p test/tsconfig.json && ava test/decorator.spec.js"
+    "build": "rollup -c",
+    "test": "jest",
+    "release": "standard-version && git push --follow-tags && npm publish"
   },
-  "files": [
-    "lib"
-  ],
-  "devDependencies": {
-    "@types/node": "^7.0.56",
-    "ava": "^0.19.1",
-    "rollup": "^0.45.2",
-    "typescript": "^2.7.2",
-    "vue": "^2.5.15"
-  },
-  "typings": "./lib/nuxt-property-decorator.d.ts",
   "dependencies": {
     "reflect-metadata": "^0.1.12",
     "vue-class-component": "^6.0.2"
   },
+  "devDependencies": {
+    "@std/esm": "^0.26.0",
+    "@types/jest": "^22.2.3",
+    "@types/node": "^9.6.4",
+    "@vue/test-utils": "^1.0.0-beta.13",
+    "babel-jest": "^22.4.3",
+    "jest": "^22.4.3",
+    "rollup": "^0.45.2",
+    "rollup-plugin-typescript2": "^0.12.0",
+    "standard-version": "^4.3.0",
+    "ts-jest": "^22.4.2",
+    "ts-node": "^5.0.1",
+    "typescript": "^2.8.1",
+    "vue": "^2.5.15",
+    "vue-jest": "^2.4.1",
+    "vue-template-compiler": "^2.5.16"
+  },
+  "typings": "./lib/nuxt-property-decorator.d.ts",
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest",
+      "^.+\\.js$": "<rootDir>/node_modules/babel-jest"
+    },
+    "testRegex": "(/tests/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
+  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/davidbernal/nuxt-property-decorator.git"
+    "url": "git+https://github.com/nuxt-community/nuxt-property-decorator.git"
   },
   "bugs": {
-    "url": "https://github.com/davidbernal/nuxt-property-decorator/issues"
+    "url": "https://github.com/nuxt-community/nuxt-property-decorator/issues"
   },
-  "homepage": "https://github.com/davidbernal/nuxt-property-decorator#readme"
+  "homepage": "https://github.com/nuxt-community/nuxt-property-decorator#readme"
 }

@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.1.8"></a>
+## [1.1.8](https://github.com/nuxt-community/nuxt-property-decorator/compare/v1.1.7...v1.1.8) (2018-04-12)
+
+
+### Bug Fixes
+
+* **postinstall:** build after postinstall ([46f8990](https://github.com/nuxt-community/nuxt-property-decorator/commit/46f8990))
+
+
+
 <a name="1.1.7"></a>
 ## [1.1.7](https://github.com/nuxt-community/nuxt-property-decorator/compare/v1.1.6...v1.1.7) (2018-04-12)
 

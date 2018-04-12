@@ -1,5 +1,12 @@
+import typescript from 'rollup-plugin-typescript2';
+
 export default {
-  entry: 'lib/nuxt-property-decorator.js',
+  entry: './src/nuxt-property-decorator.ts',
+	plugins: [
+		typescript({
+      tsconfig: './tsconfig.json'
+    })
+	],
   format: 'umd',
   moduleName: 'NuxtPropertyDecorator',
   dest: 'lib/nuxt-property-decorator.umd.js',

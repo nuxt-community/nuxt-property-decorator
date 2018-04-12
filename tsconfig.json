@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "outDir": "../lib",
+    "outDir": "./lib",
     "target": "es5",
     "module": "es2015",
     "moduleResolution": "node",
@@ -12,7 +12,7 @@
     "removeComments": false,
     "strictNullChecks": true,
     "typeRoots": [
-      "../node_modules/@types/"
+      "./node_modules/@types/"
     ],
     "allowSyntheticDefaultImports": true,
     "lib": [
@@ -23,7 +23,7 @@
     ]
   },
   "include": [
-    "./*.ts"
+    "src/**/*.ts"
   ],
   "exclude": [
     "node_modules",

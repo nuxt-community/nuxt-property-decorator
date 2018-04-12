@@ -1,7 +1,4 @@
-lib
 node_modules
 npm-debug.log
-src/*.js
-test/*.js
 .rpt2_cache/*
 yarn-error.log

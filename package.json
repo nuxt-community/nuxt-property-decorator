@@ -26,7 +26,6 @@
   },
   "scripts": {
     "build": "rollup -c",
-    "postinstall": "rollup -c",
     "test": "jest",
     "release": "standard-version && git push --follow-tags && npm publish"
   },

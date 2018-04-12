@@ -26,6 +26,7 @@
   },
   "scripts": {
     "build": "rollup -c",
+    "build:umd": "rollup -c",
     "test": "jest",
     "release": "standard-version && git push --follow-tags && npm publish"
   },

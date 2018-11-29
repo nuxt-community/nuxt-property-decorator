@@ -31,7 +31,8 @@
   },
   "dependencies": {
     "reflect-metadata": "^0.1.12",
-    "vue-class-component": "^6.0.2"
+    "vue-class-component": "^6.2.0",
+    "vuex-class": "^0.3.0"
   },
   "devDependencies": {
     "@std/esm": "^0.26.0",

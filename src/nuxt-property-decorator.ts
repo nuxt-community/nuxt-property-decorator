@@ -1,7 +1,7 @@
 'use strict'
 
 import Vue, { PropOptions, WatchOptions } from 'vue'
-import Component, { createDecorator } from 'vue-class-component';
+import Component, { mixins, createDecorator } from 'vue-class-component';
 
 Component.registerHooks([
   'beforeRouteEnter',
@@ -220,4 +220,5 @@ export function NextTick(method: string): MethodDecorator {
   }
 }
 
-export { Component, Vue }
+import { State, Getter, Action, Mutation, namespace } from 'vuex-class'
+export { Vue, Component, mixins, State, Getter, Action, Mutation, namespace }

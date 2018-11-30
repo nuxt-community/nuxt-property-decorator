@@ -29,6 +29,9 @@
     "test": "jest",
     "release": "standard-version && git push --follow-tags && npm publish"
   },
+  "gitHooks": {
+    "pre-commit": "npm run build"
+  },
   "dependencies": {
     "reflect-metadata": "^0.1.12",
     "vue-class-component": "6.3.2",
@@ -49,7 +52,8 @@
     "typescript": "^2.8.1",
     "vue": "^2.5.15",
     "vue-jest": "^2.4.1",
-    "vue-template-compiler": "^2.5.16"
+    "vue-template-compiler": "^2.5.16",
+    "yorkie": "^2.0.0"
   },
   "typings": "./lib/nuxt-property-decorator.d.ts",
   "jest": {

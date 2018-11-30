@@ -1,5 +1,5 @@
 import Vue, { PropOptions, WatchOptions } from 'vue';
-import Component from 'vue-class-component';
+import Component, { mixins } from 'vue-class-component';
 import 'reflect-metadata';
 export declare type Constructor = {
     new (...args: any[]): any;
@@ -65,4 +65,5 @@ export declare function Once(event?: string): MethodDecorator;
  * @returns {MethodDecorator}
  */
 export declare function NextTick(method: string): MethodDecorator;
-export { Component, Vue };
+import { State, Getter, Action, Mutation, namespace } from 'vuex-class';
+export { Vue, Component, mixins, State, Getter, Action, Mutation, namespace };

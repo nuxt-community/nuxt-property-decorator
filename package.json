@@ -32,7 +32,7 @@
   "dependencies": {
     "reflect-metadata": "^0.1.12",
     "vue-class-component": "^6.2.0",
-    "vuex-class": "^0.3.0"
+    "vuex-class": "^0.3.1"
   },
   "devDependencies": {
     "@std/esm": "^0.26.0",

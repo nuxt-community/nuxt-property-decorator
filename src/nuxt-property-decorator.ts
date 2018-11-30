@@ -5,6 +5,7 @@ import Component, { createDecorator } from 'vue-class-component';
 
 Component.registerHooks([
   'beforeRouteEnter',
+  'beforeRouteUpdate',
   'beforeRouteLeave',
   'asyncData',
   'fetch',

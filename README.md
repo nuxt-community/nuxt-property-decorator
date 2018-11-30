@@ -30,7 +30,9 @@ import { Component, Inject, Model, Prop, Vue, Watch } from 'nuxt-property-decora
 
 const s = Symbol('baz')
 
-@Component
+@Component({
+  components: { comp }
+})
 export class MyComponent extends Vue {
 
   @Inject() foo: string
@@ -70,6 +72,7 @@ const s = Symbol('baz')
 
 export const MyComponent = Vue.extend({
   name: 'MyComponent',
+  components: { comp },
   inject: {
     foo: 'foo',
     bar: 'bar',

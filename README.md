@@ -35,23 +35,23 @@ const s = Symbol('baz')
 })
 export class MyComponent extends Vue {
 
-  @Inject() foo: string
-  @Inject('bar') bar: string
-  @Inject(s) baz: string
+  @Inject() foo!: string
+  @Inject('bar') bar!: string
+  @Inject(s) baz!: string
 
-  @Model('change') checked: boolean
+  @Model('change') checked!: boolean
 
   @Prop()
-  propA: number
+  propA!: number
 
   @Prop({ default: 'default value' })
-  propB: string
+  propB!: string
 
   @Prop([String, Boolean])
-  propC: string | boolean
+  propC!: string | boolean
 
   @Prop({ type: null })
-  propD: any
+  propD!: any
 
   @Provide() foo = 'foo'
   @Provide('bar') baz = 'bar'

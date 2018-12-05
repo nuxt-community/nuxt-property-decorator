@@ -23,7 +23,7 @@ There are 6 decorators:
 * `@Prop`
 * `@Provide`
 * `@Watch`
-* `@Component` (**exported from** `nuxt-class-component`)
+* `@Component` (**exported from** `vue-class-component`)
 
 ```typescript
 import { Component, Inject, Model, Prop, Vue, Watch } from 'nuxt-property-decorator'
@@ -126,8 +126,9 @@ export const MyComponent = Vue.extend({
 As you can see at `propA` and `propB`, the type can be inferred automatically when it's a simple type. For more complex types like enums you do need to specify it specifically.
 Also this library needs to have `emitDecoratorMetadata` set to `true` for this to work.
 
+## Useful links
 
-See Also:
+See also:
 * [Vue Property Decorator](https://github.com/kaorun343/vue-property-decorator)
 * [Vue class component](https://github.com/vuejs/vue-class-component)
 * [Vuex Class](https://github.com/ktsn/vuex-class/)

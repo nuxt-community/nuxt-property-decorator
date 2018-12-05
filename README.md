@@ -2,7 +2,7 @@
 
 [![npm](https://img.shields.io/npm/v/nuxt-property-decorator.svg)](https://www.npmjs.com/package/nuxt-property-decorator)
 
-This library fully depends on [nuxt-class-component](https://github.com/johnlindquist/nuxt-class-component).
+This library fully depends on [vue-class-component](https://github.com/vuejs/vue-class-component).
 
 ## License
 
@@ -126,3 +126,9 @@ export const MyComponent = Vue.extend({
 As you can see at `propA` and `propB`, the type can be inferred automatically when it's a simple type. For more complex types like enums you do need to specify it specifically.
 Also this library needs to have `emitDecoratorMetadata` set to `true` for this to work.
 
+
+See Also:
+* [Vue Property Decorator](https://github.com/kaorun343/vue-property-decorator)
+* [Vue class component](https://github.com/vuejs/vue-class-component)
+* [Vuex Class](https://github.com/ktsn/vuex-class/)
+* [Nuxt Class Component](https://github.com/nuxt-community/nuxt-class-component)

@@ -16,7 +16,7 @@ MIT License
 npm i -S nuxt-property-decorator
 ```
 
-## Usage
+## Decorators and helpers
 
 There are following decorators:
 
@@ -37,6 +37,7 @@ There are following decorators:
 
 Also exports  `Vue`, `mixins`,`namespace`
 
+## Usage
 
 ```typescript
 import { Component, Inject, Model, Prop, Vue, Watch } from 'nuxt-property-decorator'

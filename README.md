@@ -18,14 +18,25 @@ npm i -S nuxt-property-decorator
 
 ## Usage
 
-There are 6 decorators:
+There are following decorators:
 
-* `@Inject`
-* `@Model`
-* `@Prop`
-* `@Provide`
-* `@Watch`
-* `@Component` (**exported from** `vue-class-component`)
+* **exported from** `vue-class-component`
+  * `@Component` 
+* **exported from** `vue-property-decorator` 
+  * `@Emit`
+  * `@Inject`
+  * `@Model`
+  * `@Prop`
+  * `@Provide`
+  * `@Watch`
+* **exported from** `vuex-class-component` 
+  * `@State`
+  * `@Getter`
+  * `@Action`
+  * `@Mutation`
+
+Also exports  `Vue`, `mixins`,`namespace`
+
 
 ```typescript
 import { Component, Inject, Model, Prop, Vue, Watch } from 'nuxt-property-decorator'
@@ -57,7 +68,7 @@ export class MyComponent extends Vue {
 
   @Provide() foo = 'foo'
   @Provide('bar') baz = 'bar'
-
+ 
   @Watch('child')
   onChildChanged(val: string, oldVal: string) { }
 

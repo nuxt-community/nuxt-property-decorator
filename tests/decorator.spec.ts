@@ -1,11 +1,12 @@
-import { mount, shallow } from '@vue/test-utils';
+import { mount, shallowMount } from '@vue/test-utils';
 import { Component, Emit, Inject, Model, Prop, Provide, Watch } from '../src/nuxt-property-decorator';
 import EmitFixture from '../fixtures/emit'
 import { Parent, Child, GrandChild } from '../fixtures/inject';
 import ModelFixture from '../fixtures/model';
 
 describe('@Emit decorator tests', () => {
-  const wrapper = shallow(new EmitFixture());
+  const wrapper = shallowMount(new EmitFixture());
+
   test('emitted increment correctly', () => {
     wrapper.vm.$emit('increment', 123);
     expect(wrapper.emitted().increment).toBeTruthy();
@@ -22,6 +23,7 @@ describe('@Emit decorator tests', () => {
     wrapper.vm.$emit('canceled');
     expect(wrapper.emitted().canceled).toBeTruthy();
   })
+  
 });
 
 describe('@Inject decorator test', () => {

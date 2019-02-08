@@ -1,13 +1,13 @@
 {
   "compilerOptions": {
     "outDir": "./lib",
+	"esModuleInterop": true,
     "target": "es5",
     "module": "es2015",
     "moduleResolution": "node",
     "isolatedModules": false,
     "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
-    "declaration": true,
+    "emitDecoratorMetadata": false,
     "noImplicitAny": true,
     "removeComments": false,
     "strictNullChecks": true,

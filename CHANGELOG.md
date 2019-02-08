@@ -4,11 +4,13 @@ All notable changes to this project will be documented in this file. See [standa
 
 <a name="2.0.1"></a>
 ## [2.0.1](https://github.com/nuxt-community/nuxt-property-decorator/compare/v1.3.1...v2.0.1) (2019-02-08)
+Library is fully inline with [Vue-class-component](https://github.com/vuejs/vue-class-component)
 
-
+### Breaking changes
+There is only one breaking change and that is renaming `mixins` to `Mixins ` to keep inline with vue-property-decorator
 
 <a name="1.2.0"></a>
-# [1.2.0](https://github.com/nuxt-community/nuxt-property-decorator/compare/v1.1.8...v1.2.0) (2018-04-12)
+## [1.2.0](https://github.com/nuxt-community/nuxt-property-decorator/compare/v1.1.8...v1.2.0) (2018-04-12)
 
 
 ### Features

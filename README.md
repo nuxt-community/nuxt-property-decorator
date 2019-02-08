@@ -2,6 +2,8 @@
 
 [![npm](https://img.shields.io/npm/v/nuxt-property-decorator.svg)](https://www.npmjs.com/package/nuxt-property-decorator)
 
+Handy ES / TypeScript decorators for class-style Vue components in Nuxt (based on [Vue class component](https://github.com/vuejs/vue-class-component)) and Property decorators for Vue (bases on [Vue Property Decorator](https://github.com/kaorun343/vue-property-decorator)) and Vuex (based on [Vuex Class](https://github.com/ktsn/vuex-class/)) 
+
 This library fully depends on [vue-class-component](https://github.com/vuejs/vue-class-component).
 
 ## License

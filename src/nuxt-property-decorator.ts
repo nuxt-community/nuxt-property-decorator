@@ -11,11 +11,14 @@ Component.registerHooks([
   'asyncData',
   'fetch',
   'head',
-  'middleware',
+  'key',
   'layout',
-  'transition',
+  'loading',
+  'middleware',
   'scrollToTop',
-  'validate'
+  'transition',
+  'validate',
+  'watchQuery'
 ])
 
 // const Component = require('nuxt-class-component');

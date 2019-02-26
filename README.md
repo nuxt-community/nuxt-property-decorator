@@ -35,8 +35,46 @@ There are following decorators:
   * `@Action`
   * `@Mutation`
 
-Also exports  `Vue`, `mixins`,`namespace`
+### Other exports
+* `namespace `
+* `mixins`
+* `Vue`
 
+## Hooks
+
+### Vue Router hooks
+  * `beforeRouteEnter`
+  * `beforeRouteUpdate`
+  * `beforeRouteLeave`
+
+### Nuxt hooks
+  * `asyncData`
+  * `fetch`
+  * `head`
+  * `key`
+  * `layout`
+  * `loading`
+  * `middleware`
+  * `scrollToTop`
+  * `transition`
+  * `validate`
+  * `watchQuery`
+###  Vue-class Hooks
+  * `data`
+  * `beforeCreate`
+  * `created`
+  * `beforeMount`
+  * `mounted`
+  * `beforeDestroy`
+  * `destroyed`
+  * `beforeUpdate`
+  * `updated`
+  * `activated`
+  * `deactivated`
+  * `render`
+  * `errorCaptured`
+  * `serverPrefetch`
+  
 ## Usage
 
 ```typescript
@@ -143,6 +181,7 @@ Also this library needs to have `emitDecoratorMetadata` set to `true` for this t
 ## Useful links
 
 See also:
+
 * [Vue Property Decorator](https://github.com/kaorun343/vue-property-decorator)
 * [Vue class component](https://github.com/vuejs/vue-class-component)
 * [Vuex Class](https://github.com/ktsn/vuex-class/)

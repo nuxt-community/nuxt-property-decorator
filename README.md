@@ -113,6 +113,12 @@ export class MyComponent extends Vue {
 
   @Watch('person', { immediate: true, deep: true })
   onPersonChanged(val: Person, oldVal: Person) { }
+  
+  beforeRouteLeave (to, from, next) {
+    // called when the route that renders this component is about to
+    // be navigated away from.
+    // has access to `this` component instance.
+  }
 }
 
 ```
@@ -159,6 +165,11 @@ export const MyComponent = Vue.extend({
   methods: {
     onChildChanged(val, oldVal) { },
     onPersonChanged(val, oldVal) { }
+  },
+  beforeRouteLeave (to, from, next) {
+    // called when the route that renders this component is about to
+    // be navigated away from.
+    // has access to `this` component instance.
   },
   watch: {
     'child': {

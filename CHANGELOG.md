@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.1.1](https://github.com/nuxt-community/nuxt-property-decorator/compare/v2.0.1...v2.1.1) (2019-02-26)
+
+
+
 <a name="2.0.1"></a>
 ## [2.0.1](https://github.com/nuxt-community/nuxt-property-decorator/compare/v1.3.1...v2.0.1) (2019-02-08)
 Library is fully inline with [Vue-class-component](https://github.com/vuejs/vue-class-component)

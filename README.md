@@ -35,7 +35,7 @@ Currently decorators need the following two Babel plugins to work   `@babel/plug
 ```
 
 ### Nuxt TS Instructions
-It works out of the box with Nuxt TT.
+It works out of the box with Nuxt TS.
 
 ## Decorators and helpers
 

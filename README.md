@@ -12,8 +12,26 @@ MIT License
 
 ## Install
 
+Installation is very easy 
 ```bash
 npm i -S nuxt-property-decorator
+```
+or
+```bash
+yarn add nuxt-property-decorator
+```
+
+Currently decorators need the following two Babel plugins to work   `@babel/plugin-proposal-decorators`,`"@babel/plugin-proposal-class-properties`. Latest Nuxt already adds them for us, the only thing we need is to add `loose` parameter to `@nuxt/babel-preset-app`. Just add this to nuxt-config
+```js
+    babel: {
+      presets({ isServer }) {
+        return [
+          [
+            "@nuxt/babel-preset-app", { loose: true }
+          ]
+        ]
+      }
+    }
 ```
 
 ## Decorators and helpers

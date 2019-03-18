@@ -1,6 +1,17 @@
 # Nuxt Property Decorator
 
-[![npm](https://img.shields.io/npm/v/nuxt-property-decorator.svg)](https://www.npmjs.com/package/nuxt-property-decorator)
+<p align="center">
+<a href="https://david-dm.org/nuxt-community/nuxt-property-decorator">
+    <img alt="" src="https://david-dm.org/nuxt-community/nuxt-property-decorator/status.svg?style=flat-square">
+</a>
+<br>
+<a href="https://npmjs.com/package/nuxt-property-decorator">
+    <img alt="" src="https://img.shields.io/npm/v/nuxt-property-decorator/latest.svg?style=flat-square">
+</a>
+<a href="https://npmjs.com/package/nuxt-property-decorator">
+    <img alt="" src="https://img.shields.io/npm/dt/nuxt-property-decorator.svg?style=flat-square">
+</a>
+</p>
 
 Handy ES / TypeScript decorators for class-style Vue components in Nuxt (based on [Vue class component](https://github.com/vuejs/vue-class-component)) and Property decorators for Vue (bases on [Vue Property Decorator](https://github.com/kaorun343/vue-property-decorator)) and Vuex (based on [Vuex Class](https://github.com/ktsn/vuex-class/)) 
 

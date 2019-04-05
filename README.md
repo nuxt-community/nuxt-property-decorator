@@ -33,7 +33,9 @@ yarn add nuxt-property-decorator
 ```
 ### Nuxt JS Instructions
 Currently decorators need the following two Babel plugins to work   `@babel/plugin-proposal-decorators`,`"@babel/plugin-proposal-class-properties`. Latest Nuxt already adds them for us, the only thing we need is to add `loose` parameter to `@nuxt/babel-preset-app`. Just add this to nuxt-config
-```js
+
+~~.
+  build: {
     babel: {
       presets({ isServer }) {
         return [
@@ -43,8 +45,18 @@ Currently decorators need the following two Babel plugins to work   `@babel/plug
         ]
       }
     }
-```
-
+  }~~ (as there is an issue with @nuxt/babel-preset-ap, meanwhile just use the following config)
+  
+```js
+  build: {
+    babel: {
+      plugins: [
+        ["@babel/plugin-proposal-decorators", { legacy: true }],
+        ["@babel/plugin-proposal-class-properties", { loose: true }]
+      ]
+    }
+  }
+```  
 ### Nuxt TS Instructions
 It works out of the box with Nuxt TS.
 

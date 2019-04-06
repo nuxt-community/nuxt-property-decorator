@@ -122,7 +122,7 @@ There are following decorators:
 ## Usage
 
 ```typescript
-import { Component, Inject, Model, Prop, Vue, Watch } from 'nuxt-property-decorator'
+import { Component, Inject, Model, Prop, Provide, Vue, Watch } from 'nuxt-property-decorator'
 
 const s = Symbol('baz')
 
@@ -205,7 +205,7 @@ export const MyComponent = Vue.extend({
       foo: this.foo,
       bar: this.baz
     }
-  }
+  },
   methods: {
     onChildChanged(val, oldVal) { },
     onPersonChanged(val, oldVal) { }

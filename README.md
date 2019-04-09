@@ -73,7 +73,7 @@ There are following decorators:
   * `@Prop`
   * `@Provide`
   * `@Watch`
-* **exported from** `vuex-class-component` 
+* **exported from** `vuex-class` 
   * `@State`
   * `@Getter`
   * `@Action`

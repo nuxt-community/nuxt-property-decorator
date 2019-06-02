@@ -23,7 +23,6 @@ Component.registerHooks([
 
 // const Component = require('nuxt-class-component');
 // const { createDecorator } = require('nuxt-class-component');
-import 'reflect-metadata'
 
 export type Constructor = {
   new (...args: any[]): any

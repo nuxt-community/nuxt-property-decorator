@@ -1,6 +1,6 @@
 {
   "name": "nuxt-property-decorator",
-  "version": "2.1.3",
+  "version": "2.2.1",
   "description": "Property decorators for Nuxt",
   "main": "lib/nuxt-property-decorator.umd.js",
   "keywords": [
@@ -37,27 +37,27 @@
     "pre-commit": "npm run build"
   },
   "dependencies": {
-    "vue-class-component": "7.0.1",
+    "vue-class-component": "7.1.0",
     "vue-property-decorator": "^8.1.1",
-    "vuex": "^3.1.0",
-    "vuex-class": "^0.3.1"
+    "vuex": "^3.1.1",
+    "vuex-class": "^0.3.2"
   },
   "devDependencies": {
     "@std/esm": "^0.26.0",
-    "@types/jest": "^24.0.9",
-    "@types/node": "^10.12.27",
+    "@types/jest": "^24.0.13",
+    "@types/node": "^12.0.4",
     "@vue/test-utils": "^1.0.0-beta.29",
-    "babel-jest": "^24.1.0",
-    "jest": "^24.1.0",
-    "rollup": "^1.3.0",
+    "babel-jest": "^24.8.0",
+    "jest": "^24.8.0",
+    "rollup": "^1.13.1",
     "rollup-plugin-typescript2": "^0.21.1",
-    "standard-version": "^5.0.0",
-    "ts-jest": "^24.0.0",
-    "ts-node": "^8.0.2",
-    "typescript": "^3.3.3333",
-    "vue": "^2.6.7",
-    "vue-jest": "^3.0.3",
-    "vue-template-compiler": "^2.6.7",
+    "standard-version": "^6.0.1",
+    "ts-jest": "^24.0.2",
+    "ts-node": "^8.2.0",
+    "typescript": "^3.5.1",
+    "vue": "^2.6.10",
+    "vue-jest": "^3.0.4",
+    "vue-template-compiler": "^2.6.10",
     "yorkie": "^2.0.0"
   },
   "typings": "./lib/nuxt-property-decorator.d.ts",

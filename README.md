@@ -45,7 +45,7 @@ Currently decorators need the following two Babel plugins to work   `@babel/plug
         ]
       }
     }
-  }~~ (as there is an issue with @nuxt/babel-preset-ap, meanwhile just use the following config)
+  }~~ (as there is an issue with @nuxt/babel-preset-app, meanwhile just use the following config)
   
 ```js
   build: {

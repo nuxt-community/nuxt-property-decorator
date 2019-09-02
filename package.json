@@ -1,6 +1,6 @@
 {
   "name": "nuxt-property-decorator",
-  "version": "2.3.0",
+  "version": "2.4.0",
   "description": "Property decorators for Nuxt",
   "main": "lib/nuxt-property-decorator.umd.js",
   "keywords": [

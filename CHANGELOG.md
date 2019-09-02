@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.4.0](https://github.com/nuxt-community/nuxt-property-decorator/compare/v2.3.0...v2.4.0) (2019-09-02)
+
+
+### Features
+
+* **deps:** updates vue-property-decorator ([e9ee54e](https://github.com/nuxt-community/nuxt-property-decorator/commit/e9ee54e))
+
+
+
 ## [2.3.0](https://github.com/nuxt-community/nuxt-property-decorator/compare/v2.1.3...v2.3.0) (2019-06-02)
 
 

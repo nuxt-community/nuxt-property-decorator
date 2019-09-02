@@ -69,10 +69,15 @@ There are following decorators:
 * **exported from** `vue-property-decorator` 
   * `@Emit`
   * `@Inject`
+  * `@InjectReactive`
   * `@Model`
   * `@Prop`
+  * `@PropSync`
   * `@Provide`
+  * `@ProvideReactive`
+  * `@Ref`
   * `@Watch`
+
 * **exported from** `vuex-class` 
   * `@State`
   * `@Getter`

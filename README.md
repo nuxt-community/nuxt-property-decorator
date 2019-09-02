@@ -64,21 +64,21 @@ It works out of the box with Nuxt TS.
 
 There are following decorators:
 
-* **exported from** `vue-class-component`
+* **exported from** [`vue-class-component`](https://github.com/vuejs/vue-class-component)
   * `@Component` 
-* **exported from** `vue-property-decorator` 
-  * `@Emit`
-  * `@Inject`
-  * `@InjectReactive`
-  * `@Model`
-  * `@Prop`
-  * `@PropSync`
-  * `@Provide`
-  * `@ProvideReactive`
-  * `@Ref`
-  * `@Watch`
+* **exported from** [`vue-property-decorator`](https://github.com/kaorun343/vue-property-decorator)
+  * [`@Emit`](https://github.com/kaorun343/vue-property-decorator/#Emit)
+  * [`@Inject`](https://github.com/kaorun343/vue-property-decorator/#Provide)
+  * [`@InjectReactive`](https://github.com/kaorun343/vue-property-decorator/#ProvideReactive)
+  * [`@Model`](https://github.com/kaorun343/vue-property-decorator/#Model)
+  * [`@Prop`](https://github.com/kaorun343/vue-property-decorator/#Prop)
+  * [`@PropSync`](https://github.com/kaorun343/vue-property-decorator/#PropSync)
+  * [`@Provide`](https://github.com/kaorun343/vue-property-decorator/#Provide)
+  * [`@ProvideReactive`](https://github.com/kaorun343/vue-property-decorator/#ProvideReactive)
+  * [`@Ref`](https://github.com/kaorun343/vue-property-decorator/#Ref)
+  * [`@Watch`](https://github.com/kaorun343/vue-property-decorator/#Watch)
 
-* **exported from** `vuex-class` 
+* **exported from** [`vuex-class`](https://github.com/ktsn/vuex-class)
   * `@State`
   * `@Getter`
   * `@Action`

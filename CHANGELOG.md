@@ -8,9 +8,9 @@ All notable changes to this project will be documented in this file. See [standa
 ### Features
 
 * **deps:** updates vue-property-decorator ([e9ee54e](https://github.com/nuxt-community/nuxt-property-decorator/commit/e9ee54e))
- * Added @PropSync decorator
- * Added @ProvideReactive and @InjectReactive decorator
- * Added @Ref decorator
+  * Added @PropSync decorator
+  * Added @ProvideReactive and @InjectReactive decorator
+  * Added @Ref decorator
 
 
 

@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import { /*Component,*/ Emit, Inject, Model, Prop, Provide, Watch } from "vue-property-decorator";
+import { /*Component,*/ Emit, Inject, Model, Prop, PropSync, Provide, Watch } from "vue-property-decorator";
 import Component, { mixins } from 'vue-class-component';
 import 'reflect-metadata';
 export declare type Constructor = {
@@ -30,4 +30,4 @@ export declare function Once(event?: string): MethodDecorator;
  */
 export declare function NextTick(method: string): MethodDecorator;
 import { State, Getter, Action, Mutation, namespace } from 'vuex-class';
-export { Vue, Component, Emit, Inject, Model, Prop, Provide, Watch, mixins, State, Getter, Action, Mutation, namespace };
+export { Vue, Component, Emit, Inject, Model, Prop, PropSync, Provide, Watch, mixins, State, Getter, Action, Mutation, namespace };

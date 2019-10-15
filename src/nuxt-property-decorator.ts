@@ -1,7 +1,7 @@
 'use strict'
 
 import Vue, { PropOptions, WatchOptions } from 'vue'
-import { /*Component,*/ Emit, Inject, Model, Prop, Provide, Watch /*, Vue, Mixins */  } from "vue-property-decorator"
+import { /*Component,*/ Emit, Inject, Model, Prop, Provide, Watch, Ref /*, Vue, Mixins */  } from "vue-property-decorator"
 import Component, { createDecorator, mixins } from 'vue-class-component'
 
 Component.registerHooks([
@@ -123,4 +123,4 @@ export function NextTick(method: string): MethodDecorator {
 }
 
 import { State, Getter, Action, Mutation, namespace } from 'vuex-class'
-export { Vue, Component, Emit, Inject, Model, Prop, Provide, Watch, mixins, State, Getter, Action, Mutation, namespace }
+export { Vue, Component, Emit, Inject, Model, Prop, Provide, Watch, Ref, mixins, State, Getter, Action, Mutation, namespace }

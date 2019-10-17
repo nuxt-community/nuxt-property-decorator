@@ -1,24 +1,33 @@
-'use strict'
+"use strict"
 
-import Vue, { PropOptions, WatchOptions } from 'vue'
-import { /*Component,*/ Emit, Inject, Model, Prop, PropSync, Provide, Watch, Ref /*, Vue, Mixins */  } from "vue-property-decorator"
-import Component, { createDecorator, mixins } from 'vue-class-component'
+import Vue, { PropOptions, WatchOptions } from "vue"
+import {
+  /*Component,*/ Emit,
+  Inject,
+  Model,
+  Prop,
+  PropSync,
+  Provide,
+  Ref,
+  Watch /*, Vue, Mixins */
+} from "vue-property-decorator"
+import Component, { createDecorator, mixins } from "vue-class-component"
 
 Component.registerHooks([
-  'beforeRouteEnter',
-  'beforeRouteUpdate',
-  'beforeRouteLeave',
-  'asyncData',
-  'fetch',
-  'head',
-  'key',
-  'layout',
-  'loading',
-  'middleware',
-  'scrollToTop',
-  'transition',
-  'validate',
-  'watchQuery'
+  "beforeRouteEnter",
+  "beforeRouteUpdate",
+  "beforeRouteLeave",
+  "asyncData",
+  "fetch",
+  "head",
+  "key",
+  "layout",
+  "loading",
+  "middleware",
+  "scrollToTop",
+  "transition",
+  "validate",
+  "watchQuery"
 ])
 
 // const Component = require('nuxt-class-component');
@@ -30,8 +39,7 @@ export type Constructor = {
 
 // Code copied from Vue/src/shared/util.js
 const hyphenateRE = /\B([A-Z])/g
-const hyphenate = (str: string) => str.replace(hyphenateRE, '-$1').toLowerCase()
-
+const hyphenate = (str: string) => str.replace(hyphenateRE, "-$1").toLowerCase()
 
 /**
  * decorator of $off
@@ -39,16 +47,16 @@ const hyphenate = (str: string) => str.replace(hyphenateRE, '-$1').toLowerCase()
  * @param method The name of the method
  */
 export function Off(event?: string, method?: string): MethodDecorator {
-  return function (target: Vue, key: string, descriptor: any) {
+  return function(target: Vue, key: string, descriptor: any) {
     key = hyphenate(key)
     const original = descriptor.value
     descriptor.value = function offer(...args: any[]) {
       if (original.apply(this, args) !== false) {
         if (method) {
-          if (typeof this[method] === 'function') {
+          if (typeof this[method] === "function") {
             this.$off(event || key, this[method])
           } else {
-            throw new TypeError('must be a method name')
+            throw new TypeError("must be a method name")
           }
         } else if (event) {
           this.$off(event || key)
@@ -67,16 +75,15 @@ export function Off(event?: string, method?: string): MethodDecorator {
 export function On(event?: string): MethodDecorator {
   return createDecorator((componentOptions, k) => {
     const key = hyphenate(k)
-    if (typeof componentOptions.created !== 'function') {
-      componentOptions.created = function () { }
+    if (typeof componentOptions.created !== "function") {
+      componentOptions.created = function() {}
     }
     const original = componentOptions.created
-    componentOptions.created = function () {
+    componentOptions.created = function() {
       original()
-      if (typeof componentOptions.methods !== 'undefined') {
+      if (typeof componentOptions.methods !== "undefined") {
         this.$on(event || key, componentOptions.methods[k])
       }
-
     }
   })
 }
@@ -88,14 +95,14 @@ export function On(event?: string): MethodDecorator {
 export function Once(event?: string): MethodDecorator {
   return createDecorator((componentOptions, k) => {
     const key = hyphenate(k)
-    if (typeof componentOptions.created !== 'function') {
-      componentOptions.created = function () { }
+    if (typeof componentOptions.created !== "function") {
+      componentOptions.created = function() {}
     }
     const original = componentOptions.created
-    componentOptions.created = function () {
+    componentOptions.created = function() {
       original()
-      if (typeof componentOptions.methods !== 'undefined') {
-        this.$once(event || key, componentOptions.methods[k]);
+      if (typeof componentOptions.methods !== "undefined") {
+        this.$once(event || key, componentOptions.methods[k])
       }
     }
   })
@@ -109,18 +116,35 @@ export function Once(event?: string): MethodDecorator {
  * @returns {MethodDecorator}
  */
 export function NextTick(method: string): MethodDecorator {
-  return function (target: Vue, key: string, descriptor: any) {
+  return function(target: Vue, key: string, descriptor: any) {
     const original = descriptor.value
     descriptor.value = function emitter(...args: any[]) {
       if (original.apply(this, args) !== false)
-        if (typeof this[method] === 'function') {
+        if (typeof this[method] === "function") {
           this.$nextTick(this[method])
         } else {
-          throw new TypeError('must be a method name')
+          throw new TypeError("must be a method name")
         }
     }
   }
 }
 
-import { State, Getter, Action, Mutation, namespace } from 'vuex-class'
-export { Vue, Component, Emit, Inject, Model, Prop, PropSync, Provide, Watch, Ref, mixins, State, Getter, Action, Mutation, namespace }
+import { State, Getter, Action, Mutation, namespace } from "vuex-class"
+export {
+  Vue,
+  Component,
+  Emit,
+  Inject,
+  Model,
+  Prop,
+  PropSync,
+  Provide,
+  Ref,
+  Watch,
+  mixins,
+  State,
+  Getter,
+  Action,
+  Mutation,
+  namespace
+}

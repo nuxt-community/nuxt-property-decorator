@@ -1,13 +1,13 @@
-import Vue, { VNode } from 'vue';
-import { Component, Model } from '../src/nuxt-property-decorator';
+import Vue, { VNode } from "vue"
+import { Component, Model } from "../src/nuxt-property-decorator"
 
 @Component({
-  name: 'test'
+  name: "test"
 })
 export default class ModelFixture extends Vue {
-  @Model('change')
-  checked: boolean;
-  render (createElement: any): VNode {
-    return createElement('div');
+  @Model("change")
+  checked: boolean
+  render(createElement: any): VNode {
+    return createElement("div")
   }
 }

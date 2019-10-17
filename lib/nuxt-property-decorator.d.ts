@@ -1,26 +1,35 @@
-import Vue from 'vue';
-import { /*Component,*/ Emit, Inject, Model, Prop, PropSync, Provide, Watch } from "vue-property-decorator";
-import Component, { mixins } from 'vue-class-component';
-import 'reflect-metadata';
+import Vue from "vue"
+import {
+  /*Component,*/ Emit,
+  Inject,
+  Model,
+  Prop,
+  PropSync,
+  Provide,
+  Ref,
+  Watch
+} from "vue-property-decorator"
+import Component, { mixins } from "vue-class-component"
+import "reflect-metadata"
 export declare type Constructor = {
-    new (...args: any[]): any;
-};
+  new (...args: any[]): any
+}
 /**
  * decorator of $off
  * @param event The name of the event
  * @param method The name of the method
  */
-export declare function Off(event?: string, method?: string): MethodDecorator;
+export declare function Off(event?: string, method?: string): MethodDecorator
 /**
  * decorator of $on
  * @param event The name of the event
  */
-export declare function On(event?: string): MethodDecorator;
+export declare function On(event?: string): MethodDecorator
 /**
  * decorator of $once
  * @param event The name of the event
  */
-export declare function Once(event?: string): MethodDecorator;
+export declare function Once(event?: string): MethodDecorator
 /**
  * decorator of $nextTick
  *
@@ -28,6 +37,23 @@ export declare function Once(event?: string): MethodDecorator;
  * @param {string} method
  * @returns {MethodDecorator}
  */
-export declare function NextTick(method: string): MethodDecorator;
-import { State, Getter, Action, Mutation, namespace } from 'vuex-class';
-export { Vue, Component, Emit, Inject, Model, Prop, PropSync, Provide, Watch, mixins, State, Getter, Action, Mutation, namespace };
+export declare function NextTick(method: string): MethodDecorator
+import { State, Getter, Action, Mutation, namespace } from "vuex-class"
+export {
+  Vue,
+  Component,
+  Emit,
+  Inject,
+  Model,
+  Prop,
+  PropSync,
+  Provide,
+  Ref,
+  Watch,
+  mixins,
+  State,
+  Getter,
+  Action,
+  Mutation,
+  namespace
+}

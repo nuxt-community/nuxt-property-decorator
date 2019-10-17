@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "outDir": "./lib",
-	"esModuleInterop": true,
+    "esModuleInterop": true,
     "target": "es5",
     "module": "es2015",
     "moduleResolution": "node",
@@ -11,23 +11,11 @@
     "noImplicitAny": true,
     "removeComments": false,
     "strictNullChecks": true,
-    "typeRoots": [
-      "./node_modules/@types/"
-    ],
+    "typeRoots": ["./node_modules/@types/"],
     "allowSyntheticDefaultImports": true,
-    "lib": [
-      "dom",
-      "es2015",
-      "es2016",
-      "es2017"
-    ]
+    "lib": ["dom", "es2015", "es2016", "es2017"]
   },
-  "include": [
-    "src/**/*.ts"
-  ],
-  "exclude": [
-    "node_modules",
-    "lib"
-  ],
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules", "lib"],
   "compileOnSave": false
 }

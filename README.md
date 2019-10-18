@@ -13,7 +13,7 @@
 </a>
 </p>
 
-Handy ES / TypeScript decorators for class-style Vue components in Nuxt (based on [Vue class component](https://github.com/vuejs/vue-class-component)) and Property decorators for Vue (bases on [Vue Property Decorator](https://github.com/kaorun343/vue-property-decorator)) and Vuex (based on [Vuex Class](https://github.com/ktsn/vuex-class/)) 
+Handy ES / TypeScript decorators for class-style Vue components in Nuxt (based on [Vue class component](https://github.com/vuejs/vue-class-component)) and Property decorators for Vue (bases on [Vue Property Decorator](https://github.com/kaorun343/vue-property-decorator)) and Vuex (based on [Vuex Class](https://github.com/ktsn/vuex-class/))
 
 This library fully depends on [vue-class-component](https://github.com/vuejs/vue-class-component).
 
@@ -23,7 +23,7 @@ MIT License
 
 ## Install
 
-Installation is very easy 
+Installation is very easy
 ```bash
 npm i -S nuxt-property-decorator
 ```
@@ -46,7 +46,7 @@ Currently decorators need the following two Babel plugins to work   `@babel/plug
       }
     }
   }~~ (as there is an issue with @nuxt/babel-preset-app, meanwhile just use the following config)
-  
+
 ```js
   build: {
     babel: {
@@ -56,7 +56,7 @@ Currently decorators need the following two Babel plugins to work   `@babel/plug
       ]
     }
   }
-```  
+```
 ### Nuxt TS Instructions
 It works out of the box with Nuxt TS.
 
@@ -64,8 +64,14 @@ It works out of the box with Nuxt TS.
 
 There are following decorators:
 
+* **Nuxt specific decorators**
+* `@Off` - decorator of $off
+* `@On`- decorator of $on
+* `@Once`- decorator of $once
+* `@NextTick` -decorator of $nextTick
+
 * **exported from** [`vue-class-component`](https://github.com/vuejs/vue-class-component)
-  * `@Component` 
+  * `@Component`
 * **exported from** [`vue-property-decorator`](https://github.com/kaorun343/vue-property-decorator)
   * [`@Emit`](https://github.com/kaorun343/vue-property-decorator/#Emit)
   * [`@Inject`](https://github.com/kaorun343/vue-property-decorator/#Provide)
@@ -83,6 +89,7 @@ There are following decorators:
   * `@Getter`
   * `@Action`
   * `@Mutation`
+
 
 ### Other exports
 * `namespace `
@@ -108,6 +115,7 @@ There are following decorators:
   * `transition`
   * `validate`
   * `watchQuery`
+  * `meta`
 ###  Vue-class Hooks
   * `data`
   * `beforeCreate`
@@ -123,7 +131,7 @@ There are following decorators:
   * `render`
   * `errorCaptured`
   * `serverPrefetch`
-  
+
 ## Usage
 
 ```typescript
@@ -156,13 +164,13 @@ export class MyComponent extends Vue {
 
   @Provide() foo = 'foo'
   @Provide('bar') baz = 'bar'
- 
+
   @Watch('child')
   onChildChanged(val: string, oldVal: string) { }
 
   @Watch('person', { immediate: true, deep: true })
   onPersonChanged(val: Person, oldVal: Person) { }
-  
+
   beforeRouteLeave (to, from, next) {
     // called when the route that renders this component is about to
     // be navigated away from.

@@ -27,7 +27,8 @@ Component.registerHooks([
   "scrollToTop",
   "transition",
   "validate",
-  "watchQuery"
+  "watchQuery",
+  "meta"
 ])
 
 // const Component = require('nuxt-class-component');

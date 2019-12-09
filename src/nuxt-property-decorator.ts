@@ -4,10 +4,12 @@ import Vue, { PropOptions, WatchOptions } from "vue"
 import {
   /*Component,*/ Emit,
   Inject,
+  InjectReactive,
   Model,
   Prop,
   PropSync,
   Provide,
+  ProvideReactive,
   Ref,
   Watch /*, Vue, Mixins */
 } from "vue-property-decorator"
@@ -136,10 +138,12 @@ export {
   Component,
   Emit,
   Inject,
+  InjectReactive,
   Model,
   Prop,
   PropSync,
   Provide,
+  ProvideReactive,
   Ref,
   Watch,
   mixins,

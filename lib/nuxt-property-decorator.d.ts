@@ -6,6 +6,8 @@ import {
   Prop,
   PropSync,
   Provide,
+  InjectReactive,
+  ProvideReactive,
   Ref,
   Watch
 } from "vue-property-decorator"
@@ -48,6 +50,8 @@ export {
   Prop,
   PropSync,
   Provide,
+  InjectReactive,
+  ProvideReactive,
   Ref,
   Watch,
   mixins,

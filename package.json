@@ -31,6 +31,7 @@
   "scripts": {
     "build": "rollup -c",
     "test": "jest",
+    "tsdoc": "typedoc --excludeNotExported --mode library --out docs/ src/",
     "release": "standard-version && git push --follow-tags && npm publish"
   },
   "gitHooks": {
@@ -54,6 +55,7 @@
     "standard-version": "^7.1.0",
     "ts-jest": "^25.2.0",
     "ts-node": "^8.4.1",
+    "typedoc": "^0.17.0-3",
     "typescript": "^3.6.4",
     "vue": "^2.6.10",
     "vue-jest": "^3.0.5",

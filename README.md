@@ -82,13 +82,12 @@ There are following decorators:
   * `@Mutation`
 
 * **exported from** [`vuex-module-decorators`](https://github.com/championswimmer/vuex-module-decorators)
-
- * Module,
- * getModule,
- * VuexModule,
- * VuexMutation (`Mutation` from original renamed to avoid conflict with 'vuex-class' one),
- * MutationAction,
- * VuexAction (`Action` from original renamed to avoid conflict with 'vuex-class' one),
+  * Module,
+  * getModule,
+  * VuexModule,
+  * VuexMutation (`Mutation` from original renamed to avoid conflict with    'vuex-class' one),
+  * MutationAction,
+  * VuexAction (`Action` from original renamed to avoid conflict with 'vuex-class' one),
 
 
 ### Other exports

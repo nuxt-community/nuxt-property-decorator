@@ -131,7 +131,14 @@ export function NextTick(method: string): MethodDecorator {
     }
   }
 }
-
+import {
+  Module,
+  getModule,
+  VuexModule,
+  Mutation as VuexMutation,
+  MutationAction,
+  Action as VuexAction,
+} from "vuex-module-decorators"
 import { State, Getter, Action, Mutation, namespace } from "vuex-class"
 export {
   Vue,
@@ -152,4 +159,10 @@ export {
   Action,
   Mutation,
   namespace,
+  Module,
+  getModule,
+  VuexModule,
+  VuexMutation,
+  MutationAction,
+  VuexAction,
 }

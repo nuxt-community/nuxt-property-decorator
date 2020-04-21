@@ -28,5 +28,6 @@ export declare function Once(event?: string): MethodDecorator;
  * @returns {MethodDecorator}
  */
 export declare function NextTick(method: string): MethodDecorator;
+import { Module, getModule, VuexModule, Mutation as VuexMutation, MutationAction, Action as VuexAction } from "vuex-module-decorators";
 import { State, Getter, Action, Mutation, namespace } from "vuex-class";
-export { Vue, Component, Emit, Inject, InjectReactive, Model, Prop, PropSync, Provide, ProvideReactive, Ref, Watch, mixins, State, Getter, Action, Mutation, namespace };
+export { Vue, Component, Emit, Inject, InjectReactive, Model, Prop, PropSync, Provide, ProvideReactive, Ref, Watch, mixins, State, Getter, Action, Mutation, namespace, Module, getModule, VuexModule, VuexMutation, MutationAction, VuexAction, };

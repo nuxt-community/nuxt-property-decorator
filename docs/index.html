@@ -94,24 +94,15 @@
 					<h3>Nuxt JS Instructions</h3>
 				</a>
 				<p>Currently decorators need the following two Babel plugins to work   <code>@babel/plugin-proposal-decorators</code>,<code>&quot;@babel/plugin-proposal-class-properties</code>. Latest Nuxt already adds them for us, the only thing we need is to add <code>loose</code> parameter to <code>@nuxt/babel-preset-app</code>. Just add this to nuxt-config</p>
-				<p><del>.
-						build: {
-						babel: {
-						presets({ isServer }) {
-						return [
-						[
-						&quot;@nuxt/babel-preset-app&quot;, { loose: true }
-						]
-						]
-						}
-						}
-				}</del> (as there is an issue with @nuxt/babel-preset-app, meanwhile just use the following config)</p>
 				<pre><code class="language-js">  build: {
     <span class="hljs-attr">babel</span>: {
-      <span class="hljs-attr">plugins</span>: [
-        [<span class="hljs-string">"@babel/plugin-proposal-decorators"</span>, { <span class="hljs-attr">legacy</span>: <span class="hljs-literal">true</span> }],
-        [<span class="hljs-string">"@babel/plugin-proposal-class-properties"</span>, { <span class="hljs-attr">loose</span>: <span class="hljs-literal">true</span> }]
-      ]
+      presets({ isServer }) {
+        <span class="hljs-keyword">return</span> [
+          [
+            <span class="hljs-string">"@nuxt/babel-preset-app"</span>, { <span class="hljs-attr">loose</span>: <span class="hljs-literal">true</span> }
+          ]
+        ]
+      }
     }
   }</code></pre>
 				<a href="#nuxt-ts-instructions" id="nuxt-ts-instructions" style="color: inherit; text-decoration: none;">
@@ -158,6 +149,16 @@
 							<li><code>@Getter</code></li>
 							<li><code>@Action</code></li>
 							<li><code>@Mutation</code></li>
+						</ul>
+					</li>
+					<li><p><strong>exported from</strong> <a href="https://github.com/championswimmer/vuex-module-decorators"><code>vuex-module-decorators</code></a></p>
+						<ul>
+							<li>Module,</li>
+							<li>getModule,</li>
+							<li>VuexModule,</li>
+							<li>VuexMutation (<code>Mutation</code> from original renamed to avoid conflict with &#39;vuex-class&#39; one),</li>
+							<li>MutationAction,</li>
+							<li>VuexAction (<code>Action</code> from original renamed to avoid conflict with &#39;vuex-class&#39; one),</li>
 						</ul>
 					</li>
 				</ul>

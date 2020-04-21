@@ -6,12 +6,12 @@ import {
   Model,
   Prop,
   Provide,
-  Watch
+  Watch,
 } from "../src/nuxt-property-decorator"
 
 @Component
 export default class EmitFixture extends Vue {
-  count = 0
+  count = 1
 
   @Emit("reset") resetCount() {
     this.count = 0

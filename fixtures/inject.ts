@@ -6,7 +6,7 @@ import {
   Model,
   Prop,
   Provide,
-  Watch
+  Watch,
 } from "../src/nuxt-property-decorator"
 
 const s = Symbol()
@@ -14,9 +14,9 @@ const s = Symbol()
   provide() {
     return {
       [s]: "one",
-      bar: "two"
+      bar: "two",
     }
-  }
+  },
 })
 export class Parent extends Vue {
   render(createElement: any): VNode {

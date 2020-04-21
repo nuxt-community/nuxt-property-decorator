@@ -6,7 +6,6 @@
   "main": "lib/nuxt-property-decorator.common.js",
   "typings": "lib/nuxt-property-decorator.d.ts",
   "module": "lib/nuxt-property-decorator.esm.js",
-  
   "keywords": [
     "vue",
     "typescript",
@@ -43,8 +42,8 @@
   },
   "dependencies": {
     "vue-class-component": "7.2.3",
-    "vue-property-decorator": "^8.3.0",
-    "vuex": "^3.1.1",
+    "vue-property-decorator": "^8.4.1",
+    "vuex": "^3.2.0",
     "vuex-class": "^0.3.2"
   },
   "devDependencies": {
@@ -57,13 +56,13 @@
     "rollup": "^2.6.1",
     "rollup-plugin-typescript2": "^0.27.0",
     "standard-version": "^7.1.0",
-    "ts-jest": "^25.2.0",
-    "ts-node": "^8.4.1",
-    "typedoc": "^0.17.0-3",
-    "typescript": "^3.6.4",
-    "vue": "^2.6.10",
+    "ts-jest": "^25.4.0",
+    "ts-node": "^8.9.0",
+    "typedoc": "^0.17.4",
+    "typescript": "^3.8.3",
+    "vue": "^2.6.11",
     "vue-jest": "^3.0.5",
-    "vue-template-compiler": "^2.6.10",
+    "vue-template-compiler": "^2.6.11",
     "yorkie": "^2.0.0"
   },
   "jest": {

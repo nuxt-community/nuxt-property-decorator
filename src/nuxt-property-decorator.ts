@@ -11,7 +11,7 @@ import {
   Provide,
   ProvideReactive,
   Ref,
-  Watch /*, Vue, Mixins */
+  Watch /*, Vue, Mixins */,
 } from "vue-property-decorator"
 import Component, { createDecorator, mixins } from "vue-class-component"
 
@@ -30,7 +30,7 @@ Component.registerHooks([
   "transition",
   "validate",
   "watchQuery",
-  "meta"
+  "meta",
 ])
 
 // const Component = require('nuxt-class-component');
@@ -50,7 +50,7 @@ const hyphenate = (str: string) => str.replace(hyphenateRE, "-$1").toLowerCase()
  * @param method The name of the method
  */
 export function Off(event?: string, method?: string): MethodDecorator {
-  return function(target: Vue, key: string, descriptor: any) {
+  return function (target: Vue, key: string, descriptor: any) {
     key = hyphenate(key)
     const original = descriptor.value
     descriptor.value = function offer(...args: any[]) {
@@ -79,10 +79,10 @@ export function On(event?: string): MethodDecorator {
   return createDecorator((componentOptions, k) => {
     const key = hyphenate(k)
     if (typeof componentOptions.created !== "function") {
-      componentOptions.created = function() {}
+      componentOptions.created = function () {}
     }
     const original = componentOptions.created
-    componentOptions.created = function() {
+    componentOptions.created = function () {
       original()
       if (typeof componentOptions.methods !== "undefined") {
         this.$on(event || key, componentOptions.methods[k])
@@ -99,10 +99,10 @@ export function Once(event?: string): MethodDecorator {
   return createDecorator((componentOptions, k) => {
     const key = hyphenate(k)
     if (typeof componentOptions.created !== "function") {
-      componentOptions.created = function() {}
+      componentOptions.created = function () {}
     }
     const original = componentOptions.created
-    componentOptions.created = function() {
+    componentOptions.created = function () {
       original()
       if (typeof componentOptions.methods !== "undefined") {
         this.$once(event || key, componentOptions.methods[k])
@@ -119,7 +119,7 @@ export function Once(event?: string): MethodDecorator {
  * @returns {MethodDecorator}
  */
 export function NextTick(method: string): MethodDecorator {
-  return function(target: Vue, key: string, descriptor: any) {
+  return function (target: Vue, key: string, descriptor: any) {
     const original = descriptor.value
     descriptor.value = function emitter(...args: any[]) {
       if (original.apply(this, args) !== false)
@@ -151,5 +151,5 @@ export {
   Getter,
   Action,
   Mutation,
-  namespace
+  namespace,
 }

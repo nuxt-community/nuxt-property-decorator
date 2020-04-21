@@ -2,7 +2,11 @@
   "name": "nuxt-property-decorator",
   "version": "2.5.1",
   "description": "Property decorators for Nuxt",
-  "main": "lib/nuxt-property-decorator.umd.js",
+  "browser": "lib/nuxt-property-decorator.umd.js",
+  "main": "lib/nuxt-property-decorator.common.js",
+  "typings": "lib/nuxt-property-decorator.d.ts",
+  "module": "lib/nuxt-property-decorator.esm.js",
+  
   "keywords": [
     "vue",
     "typescript",
@@ -62,7 +66,6 @@
     "vue-template-compiler": "^2.6.10",
     "yorkie": "^2.0.0"
   },
-  "typings": "./lib/nuxt-property-decorator.d.ts",
   "jest": {
     "transform": {
       "^.+\\.tsx?$": "ts-jest",

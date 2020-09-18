@@ -105,6 +105,7 @@ There are following decorators:
 ### Nuxt hooks
   * `asyncData`
   * `fetch`
+  * `fetchOnServer`
   * `head`
   * `key`
   * `layout`

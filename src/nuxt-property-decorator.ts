@@ -23,6 +23,7 @@ Component.registerHooks([
   "beforeRouteLeave",
   "asyncData",
   "fetch",
+  "fetchOnServer",
   "head",
   "key",
   "layout",

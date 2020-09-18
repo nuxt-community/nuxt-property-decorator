@@ -5,8 +5,9 @@ import { Component, Model } from "../src/nuxt-property-decorator"
   name: "test",
 })
 export default class ModelFixture extends Vue {
-  @Model("change")
-  checked: boolean
+  @Model("change", Boolean)
+  checked!: boolean
+
   render(createElement: any): VNode {
     return createElement("div")
   }

@@ -1,14 +1,13 @@
 import Vue, { VNode } from "vue"
 import {
-  Component,
   Emit,
+  Component,
   Inject,
   Model,
   Prop,
   Provide,
   Watch,
 } from "../src/nuxt-property-decorator"
-
 @Component
 export default class EmitFixture extends Vue {
   count = 1

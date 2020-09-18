@@ -1,6 +1,7 @@
 import Vue from "vue";
-import { Emit, Inject, InjectReactive, Model, Prop, PropSync, Provide, ProvideReactive, Ref, Watch } from "vue-property-decorator";
+import { Inject, InjectReactive, Model, Prop, PropSync, Provide, ProvideReactive, Ref, Watch } from "vue-property-decorator";
 import Component, { mixins } from "vue-class-component";
+declare const Emit: Function;
 export declare type Constructor = {
     new (...args: any[]): any;
 };

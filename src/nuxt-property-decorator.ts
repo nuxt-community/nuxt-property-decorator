@@ -2,7 +2,7 @@
 
 import Vue, { PropOptions, WatchOptions } from "vue"
 import {
-  /*Component,*/ Emit,
+  /*Component,*/ Emit as emit,
   Inject,
   InjectReactive,
   Model,
@@ -14,6 +14,8 @@ import {
   Watch /*, Vue, Mixins */,
 } from "vue-property-decorator"
 import Component, { createDecorator, mixins } from "vue-class-component"
+
+const Emit: Function = emit
 
 Component.registerHooks([
   "beforeRouteEnter",
@@ -138,6 +140,7 @@ import {
   Mutation as VuexMutation,
   MutationAction,
   Action as VuexAction,
+  // config,
 } from "vuex-module-decorators"
 import { State, Getter, Action, Mutation, namespace } from "vuex-class"
 export {
@@ -165,4 +168,5 @@ export {
   VuexMutation,
   MutationAction,
   VuexAction,
+  // config,
 }

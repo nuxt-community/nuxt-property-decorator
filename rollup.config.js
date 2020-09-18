@@ -16,6 +16,7 @@ export default {
         vue: "Vue",
         "vuex-class": "VuexClass",
         "vue-class-component": "VueClassComponent",
+        "vuex-module-decorators": "VuexModuleDecorators",
         "vue-property-decorator": "VuePropertyDecorator",
       },
     },
@@ -35,6 +36,7 @@ export default {
   external: [
     "vue",
     "vuex-class",
+    "vuex-module-decorators",
     "vue-property-decorator",
     "vue-class-component",
     "reflect-metadata",

@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.8.3](https://github.com/nuxt-community/nuxt-property-decorator/compare/v2.8.2...v2.8.3) (2020-09-18)
+
 ### [2.8.2](https://github.com/nuxt-community/nuxt-property-decorator/compare/v2.7.2...v2.8.2) (2020-09-18)
 
 ### [2.7.2](https://github.com/nuxt-community/nuxt-property-decorator/compare/v2.7.1...v2.7.2) (2020-04-21)

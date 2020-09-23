@@ -1,6 +1,6 @@
 {
   "name": "nuxt-property-decorator",
-  "version": "2.8.4",
+  "version": "2.8.5",
   "description": "Property decorators for Nuxt",
   "browser": "lib/nuxt-property-decorator.umd.js",
   "main": "lib/nuxt-property-decorator.common.js",
@@ -40,9 +40,7 @@
   "gitHooks": {
     "pre-commit": "npm run build"
   },
-  "dependencies": {
-
-  },
+  "dependencies": {},
   "devDependencies": {
     "@std/esm": "^0.26.0",
     "@types/jest": "^26.0.4",
@@ -69,7 +67,7 @@
   },
   "peerDependencies": {
     "vue": "*",
-    "vue-class-component": "*",    
+    "vue-class-component": "*",
     "vue-property-decorator": "*",
     "vuex": "*",
     "vuex-class": "*",

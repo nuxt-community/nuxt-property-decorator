@@ -12,12 +12,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [2.8.2](https://github.com/nuxt-community/nuxt-property-decorator/compare/v2.7.2...v2.8.2) (2020-09-18)
 
-* From this version yo might need to manually  add the following dependencies if you need that functionality:
-
-- "vue-property-decorator"
-- "vuex-class"
-- "vuex-module-decorators"
-
 ### [2.7.2](https://github.com/nuxt-community/nuxt-property-decorator/compare/v2.7.1...v2.7.2) (2020-04-21)
 
 * Added [vuex-module-decorators](https://github.com/championswimmer/vuex-module-decorators)

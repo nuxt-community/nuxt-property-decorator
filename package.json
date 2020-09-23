@@ -43,7 +43,10 @@
     "pre-commit": "npm run build:full"
   },
   "dependencies": {
-    "vue-class-component": "^7.2.6"
+    "vue-class-component": "^7.2.6",
+    "vue-property-decorator": "^9.0.0",
+    "vuex-module-decorators": "^1.0.1",
+    "vuex-class": "^0.3.2"
   },
   "devDependencies": {
     "@microsoft/api-extractor": "^7.9.22",
@@ -62,19 +65,9 @@
     "typescript": "^4.0.3",
     "vue": "^2.6.12",
     "vue-jest": "^3.0.7",
-    "vue-property-decorator": "^9.0.0",
     "vue-template-compiler": "^2.6.12",
     "vuex": "^3.5.1",
-    "vuex-class": "^0.3.2",
-    "vuex-module-decorators": "^1.0.1",
     "yorkie": "^2.0.0"
-  },
-  "peerDependencies": {
-    "vue": "2.x",
-    "vue-property-decorator": "^9.0.0",
-    "vuex": ">3",
-    "vuex-class": "^0.3.2",
-    "vuex-module-decorators": "^1.0.1"
   },
   "jest": {
     "transform": {

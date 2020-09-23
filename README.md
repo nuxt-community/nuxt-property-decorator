@@ -35,14 +35,6 @@ or
 yarn add nuxt-property-decorator
 ```
 
-Also, add the corresponfing library  if you need to use functionality from any of the following
-
-- "vue-property-decorator",
-- "vuex-class"
-- "vuex-module-decorators"
-
-As they are optional we leave that up to you.
-
 ### Nuxt JS Instructions
 
 It works out of the box with Nuxt JS.

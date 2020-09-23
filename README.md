@@ -24,136 +24,149 @@ MIT License
 ## Install
 
 Installation is very easy
+
 ```bash
 npm i -S nuxt-property-decorator
 ```
+
 or
+
 ```bash
 yarn add nuxt-property-decorator
 ```
-### Nuxt JS Instructions
-Currently decorators need the following two Babel plugins to work   `@babel/plugin-proposal-decorators`,`"@babel/plugin-proposal-class-properties`. Latest Nuxt already adds them for us, the only thing we need is to add `loose` parameter to `@nuxt/babel-preset-app`. Just add this to nuxt-config
 
-```js
-  build: {
-    babel: {
-      presets({ isServer }) {
-        return [
-          [
-            "@nuxt/babel-preset-app", { loose: true }
-          ]
-        ]
-      }
-    }
-  }
-```
+Also, add the corresponfing library  if you need to use functionality from any of the following
+
+- "vue-property-decorator",
+- "vuex-class"
+- "vuex-module-decorators"
+
+As they are optional we leave that up to you.
+
+### Nuxt JS Instructions
+
+It works out of the box with Nuxt JS.
 
 ### Nuxt TS Instructions
+
 It works out of the box with Nuxt TS.
 
 ## Decorators and helpers
 
 There are following decorators:
 
-* **Nuxt specific decorators**
-* `@Off` - decorator of $off
-* `@On`- decorator of $on
-* `@Once`- decorator of $once
-* `@NextTick` -decorator of $nextTick
+- **Nuxt specific decorators**
+- `@Off` - decorator of \$off
+- `@On`- decorator of \$on
+- `@Once`- decorator of \$once
+- `@NextTick` -decorator of \$nextTick
 
-* **exported from** [`vue-class-component`](https://github.com/vuejs/vue-class-component)
-  * `@Component`
-* **exported from** [`vue-property-decorator`](https://github.com/kaorun343/vue-property-decorator)
-  * [`@Emit`](https://github.com/kaorun343/vue-property-decorator/#Emit)
-  * [`@Inject`](https://github.com/kaorun343/vue-property-decorator/#Provide)
-  * [`@InjectReactive`](https://github.com/kaorun343/vue-property-decorator/#ProvideReactive)
-  * [`@Model`](https://github.com/kaorun343/vue-property-decorator/#Model)
-  * [`@Prop`](https://github.com/kaorun343/vue-property-decorator/#Prop)
-  * [`@PropSync`](https://github.com/kaorun343/vue-property-decorator/#PropSync)
-  * [`@Provide`](https://github.com/kaorun343/vue-property-decorator/#Provide)
-  * [`@ProvideReactive`](https://github.com/kaorun343/vue-property-decorator/#ProvideReactive)
-  * [`@Ref`](https://github.com/kaorun343/vue-property-decorator/#Ref)
-  * [`@Watch`](https://github.com/kaorun343/vue-property-decorator/#Watch)
+- **exported from** [`vue-class-component`](https://github.com/vuejs/vue-class-component)
+  - `@Component`
+- **exported from** [`vue-property-decorator`](https://github.com/kaorun343/vue-property-decorator)
 
-* **exported from** [`vuex-class`](https://github.com/ktsn/vuex-class)
-  * `@State`
-  * `@Getter`
-  * `@Action`
-  * `@Mutation`
+  - [`@Emit`](https://github.com/kaorun343/vue-property-decorator/#Emit)
+  - [`@Inject`](https://github.com/kaorun343/vue-property-decorator/#Provide)
+  - [`@InjectReactive`](https://github.com/kaorun343/vue-property-decorator/#ProvideReactive)
+  - [`@Model`](https://github.com/kaorun343/vue-property-decorator/#Model)
+  - [`@Prop`](https://github.com/kaorun343/vue-property-decorator/#Prop)
+  - [`@PropSync`](https://github.com/kaorun343/vue-property-decorator/#PropSync)
+  - [`@Provide`](https://github.com/kaorun343/vue-property-decorator/#Provide)
+  - [`@ProvideReactive`](https://github.com/kaorun343/vue-property-decorator/#ProvideReactive)
+  - [`@Ref`](https://github.com/kaorun343/vue-property-decorator/#Ref)
+  - [`@Watch`](https://github.com/kaorun343/vue-property-decorator/#Watch)
 
-* **exported from** [`vuex-module-decorators`](https://github.com/championswimmer/vuex-module-decorators)
-  * Module,
-  * getModule,
-  * VuexModule,
-  * VuexMutation (`Mutation` from original renamed to avoid conflict with    'vuex-class' one),
-  * MutationAction,
-  * VuexAction (`Action` from original renamed to avoid conflict with 'vuex-class' one),
+- **exported from** [`vuex-class`](https://github.com/ktsn/vuex-class)
 
+  - `@State`
+  - `@Getter`
+  - `@Action`
+  - `@Mutation`
+
+- **exported from** [`vuex-module-decorators`](https://github.com/championswimmer/vuex-module-decorators)
+  - Module,
+  - getModule,
+  - VuexModule,
+  - VuexMutation (`Mutation` from original renamed to avoid conflict with 'vuex-class' one),
+  - MutationAction,
+  - VuexAction (`Action` from original renamed to avoid conflict with 'vuex-class' one),
 
 ### Other exports
-* `namespace `
-* `mixins`
-* `Vue`
+
+- `namespace `
+- `mixins`
+- `Vue`
 
 ## Hooks
 
 ### Vue Router hooks
-  * `beforeRouteEnter`
-  * `beforeRouteUpdate`
-  * `beforeRouteLeave`
+
+- `beforeRouteEnter`
+- `beforeRouteUpdate`
+- `beforeRouteLeave`
 
 ### Nuxt hooks
-  * `asyncData`
-  * `fetch`
-  * `fetchOnServer`
-  * `head`
-  * `key`
-  * `layout`
-  * `loading`
-  * `middleware`
-  * `scrollToTop`
-  * `transition`
-  * `validate`
-  * `watchQuery`
-  * `meta`
-###  Vue-class Hooks
-  * `data`
-  * `beforeCreate`
-  * `created`
-  * `beforeMount`
-  * `mounted`
-  * `beforeDestroy`
-  * `destroyed`
-  * `beforeUpdate`
-  * `updated`
-  * `activated`
-  * `deactivated`
-  * `render`
-  * `errorCaptured`
-  * `serverPrefetch`
+
+- `asyncData`
+- `fetch`
+- `fetchOnServer`
+- `head`
+- `key`
+- `layout`
+- `loading`
+- `middleware`
+- `scrollToTop`
+- `transition`
+- `validate`
+- `watchQuery`
+- `meta`
+
+### Vue-class Hooks
+
+- `data`
+- `beforeCreate`
+- `created`
+- `beforeMount`
+- `mounted`
+- `beforeDestroy`
+- `destroyed`
+- `beforeUpdate`
+- `updated`
+- `activated`
+- `deactivated`
+- `render`
+- `errorCaptured`
+- `serverPrefetch`
 
 ## Usage
 
 ```typescript
-import { Component, Inject, Model, Prop, Provide, Vue, Watch } from 'nuxt-property-decorator'
+import {
+  Component,
+  Inject,
+  Model,
+  Prop,
+  Provide,
+  Vue,
+  Watch,
+} from "nuxt-property-decorator"
 
-const s = Symbol('baz')
+const s = Symbol("baz")
 
 @Component({
-  components: { comp }
+  components: { comp },
 })
 export class MyComponent extends Vue {
-
   @Inject() foo!: string
-  @Inject('bar') bar!: string
+  @Inject("bar") bar!: string
   @Inject(s) baz!: string
 
-  @Model('change') checked!: boolean
+  @Model("change") checked!: boolean
 
   @Prop()
   propA!: number
 
-  @Prop({ default: 'default value' })
+  @Prop({ default: "default value" })
   propB!: string
 
   @Prop([String, Boolean])
@@ -162,84 +175,83 @@ export class MyComponent extends Vue {
   @Prop({ type: null })
   propD!: any
 
-  @Provide() foo = 'foo'
-  @Provide('bar') baz = 'bar'
+  @Provide() foo = "foo"
+  @Provide("bar") baz = "bar"
 
-  @Watch('child')
-  onChildChanged(val: string, oldVal: string) { }
+  @Watch("child")
+  onChildChanged(val: string, oldVal: string) {}
 
-  @Watch('person', { immediate: true, deep: true })
-  onPersonChanged(val: Person, oldVal: Person) { }
+  @Watch("person", { immediate: true, deep: true })
+  onPersonChanged(val: Person, oldVal: Person) {}
 
-  beforeRouteLeave (to, from, next) {
+  beforeRouteLeave(to, from, next) {
     // called when the route that renders this component is about to
     // be navigated away from.
     // has access to `this` component instance.
   }
 }
-
 ```
 
 is equivalent to
 
 ```js
-const s = Symbol('baz')
+const s = Symbol("baz")
 
 export const MyComponent = Vue.extend({
-  name: 'MyComponent',
+  name: "MyComponent",
   components: { comp },
   inject: {
-    foo: 'foo',
-    bar: 'bar',
-    [s]: s
+    foo: "foo",
+    bar: "bar",
+    [s]: s,
   },
   model: {
-    prop: 'checked',
-    event: 'change'
+    prop: "checked",
+    event: "change",
   },
   props: {
-    checked: Boolean,
-    propA: Number,
+    checked: Boolean,
+    propA: Number,
     propB: {
       type: String,
-      default: 'default value'
+      default: "default value",
     },
     propC: [String, Boolean],
-    propD: { type: null }
+    propD: { type: null },
   },
-  data () {
+  data() {
     return {
-      foo: 'foo',
-      baz: 'bar'
+      foo: "foo",
+      baz: "bar",
     }
   },
-  provide () {
+  provide() {
     return {
       foo: this.foo,
-      bar: this.baz
+      bar: this.baz,
     }
   },
   methods: {
-    onChildChanged(val, oldVal) { },
-    onPersonChanged(val, oldVal) { }
+    onChildChanged(val, oldVal) {},
+    onPersonChanged(val, oldVal) {},
   },
-  beforeRouteLeave (to, from, next) {
+  beforeRouteLeave(to, from, next) {
     // called when the route that renders this component is about to
     // be navigated away from.
     // has access to `this` component instance.
   },
   watch: {
-    'child': {
-      handler: 'onChildChanged',
+    child: {
+      handler: "onChildChanged",
       immediate: false,
-      deep: false
+      deep: false,
     },
-    'person': {
-      handler: 'onPersonChanged',
+    person: {
+      handler: "onPersonChanged",
       immediate: true,
-      deep: true
-    }
-  }
+      deep: true,
+    },
+  },
 })
 ```
 
@@ -250,7 +262,7 @@ Also this library needs to have `emitDecoratorMetadata` set to `true` for this t
 
 See also:
 
-* [Vue Property Decorator](https://github.com/kaorun343/vue-property-decorator)
-* [Vue class component](https://github.com/vuejs/vue-class-component)
-* [Vuex Class](https://github.com/ktsn/vuex-class/)
-* [Nuxt Class Component](https://github.com/nuxt-community/nuxt-class-component)
+- [Vue Property Decorator](https://github.com/kaorun343/vue-property-decorator)
+- [Vue class component](https://github.com/vuejs/vue-class-component)
+- [Vuex Class](https://github.com/ktsn/vuex-class/)
+- [Nuxt Class Component](https://github.com/nuxt-community/nuxt-class-component)

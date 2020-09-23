@@ -1,21 +1,8 @@
 "use strict"
 
 import Vue, { PropOptions, WatchOptions } from "vue"
-import {
-  /*Component,*/ Emit as emit,
-  Inject,
-  InjectReactive,
-  Model,
-  Prop,
-  PropSync,
-  Provide,
-  ProvideReactive,
-  Ref,
-  Watch /*, Vue, Mixins */,
-} from "vue-property-decorator"
-import Component, { createDecorator, mixins } from "vue-class-component"
 
-const Emit: Function = emit
+import Component, { createDecorator, mixins } from "vue-class-component"
 
 Component.registerHooks([
   "beforeRouteEnter",
@@ -36,9 +23,38 @@ Component.registerHooks([
   "meta",
 ])
 
+export { Vue, Component, mixins }
+
+export {
+  Module,
+  getModule,
+  VuexModule,
+  Mutation as VuexMutation,
+  MutationAction,
+  Action as VuexAction,
+} from // config,
+"vuex-module-decorators"
+export { State, Getter, Action, Mutation, namespace } from "vuex-class"
+export {
+  /*Component,*/ Emit,
+  Inject,
+  InjectReactive,
+  Model,
+  Prop,
+  PropSync,
+  Provide,
+  ProvideReactive,
+  Ref,
+  Watch /*, Vue, Mixins */,
+} from "vue-property-decorator"
+
+
 // const Component = require('nuxt-class-component');
 // const { createDecorator } = require('nuxt-class-component');
 
+/**
+ * @public
+ */
 export type Constructor = {
   new (...args: any[]): any
 }
@@ -49,8 +65,9 @@ const hyphenate = (str: string) => str.replace(hyphenateRE, "-$1").toLowerCase()
 
 /**
  * decorator of $off
- * @param event The name of the event
- * @param method The name of the method
+ * @public
+ * @param event - The name of the event
+ * @param method - The name of the method
  */
 export function Off(event?: string, method?: string): MethodDecorator {
   return function (target: Vue, key: string, descriptor: any) {
@@ -76,7 +93,8 @@ export function Off(event?: string, method?: string): MethodDecorator {
 
 /**
  * decorator of $on
- * @param event The name of the event
+ * @public
+ * @param event - The name of the event
  */
 export function On(event?: string): MethodDecorator {
   return createDecorator((componentOptions, k) => {
@@ -96,7 +114,8 @@ export function On(event?: string): MethodDecorator {
 
 /**
  * decorator of $once
- * @param event The name of the event
+ * @public
+ * @param event - The name of the event
  */
 export function Once(event?: string): MethodDecorator {
   return createDecorator((componentOptions, k) => {
@@ -117,9 +136,9 @@ export function Once(event?: string): MethodDecorator {
 /**
  * decorator of $nextTick
  *
- * @export
- * @param {string} method
- * @returns {MethodDecorator}
+ * @public
+ * @param method - Method name
+ * @returns Method Decorator
  */
 export function NextTick(method: string): MethodDecorator {
   return function (target: Vue, key: string, descriptor: any) {
@@ -133,41 +152,4 @@ export function NextTick(method: string): MethodDecorator {
         }
     }
   }
-}
-import {
-  Module,
-  getModule,
-  VuexModule,
-  Mutation as VuexMutation,
-  MutationAction,
-  Action as VuexAction,
-  // config,
-} from "vuex-module-decorators"
-import { State, Getter, Action, Mutation, namespace } from "vuex-class"
-export {
-  Vue,
-  Component,
-  Emit,
-  Inject,
-  InjectReactive,
-  Model,
-  Prop,
-  PropSync,
-  Provide,
-  ProvideReactive,
-  Ref,
-  Watch,
-  mixins,
-  State,
-  Getter,
-  Action,
-  Mutation,
-  namespace,
-  Module,
-  getModule,
-  VuexModule,
-  VuexMutation,
-  MutationAction,
-  VuexAction,
-  // config,
 }

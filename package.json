@@ -33,15 +33,19 @@
   },
   "scripts": {
     "build": "rollup -c",
+    "build:full": "npm run build && npm run apiextract && npm run tsdoc",
     "test": "jest",
+    "apiextract": "api-extractor run --local --verbose",
     "tsdoc": "typedoc --excludeNotExported --mode library --out docs/ src/",
     "release": "standard-version && git push --follow-tags && npm publish"
   },
   "gitHooks": {
-    "pre-commit": "npm run build"
+    "pre-commit": "npm run build:full"
   },
-  "dependencies": {},
+  "dependencies": {
+  },
   "devDependencies": {
+    "@microsoft/api-extractor": "^7.9.22",
     "@std/esm": "^0.26.0",
     "@types/jest": "^26.0.4",
     "@types/node": "12.11.1",
@@ -57,12 +61,12 @@
     "typescript": "^4.0.3",
     "vue": "^2.6.12",
     "vue-class-component": "7.2.6",
+    "vue-jest": "^3.0.7",
     "vue-property-decorator": "9.0.0",
+    "vue-template-compiler": "^2.6.12",
     "vuex": "3.5.1",
     "vuex-class": "0.3.2",
     "vuex-module-decorators": "1.0.1",
-    "vue-jest": "^3.0.7",
-    "vue-template-compiler": "^2.6.12",
     "yorkie": "^2.0.0"
   },
   "peerDependencies": {

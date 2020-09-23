@@ -90,21 +90,17 @@
 				<pre><code class="language-bash">npm i -S nuxt-property-decorator</code></pre>
 				<p>or</p>
 				<pre><code class="language-bash">yarn add nuxt-property-decorator</code></pre>
+				<p>Also, add the corresponfing library  if you need to use functionality from any of the following</p>
+				<ul>
+					<li>&quot;vue-property-decorator&quot;,</li>
+					<li>&quot;vuex-class&quot;</li>
+					<li>&quot;vuex-module-decorators&quot;</li>
+				</ul>
+				<p>As they are optional we leave that up to you.</p>
 				<a href="#nuxt-js-instructions" id="nuxt-js-instructions" style="color: inherit; text-decoration: none;">
 					<h3>Nuxt JS Instructions</h3>
 				</a>
-				<p>Currently decorators need the following two Babel plugins to work   <code>@babel/plugin-proposal-decorators</code>,<code>&quot;@babel/plugin-proposal-class-properties</code>. Latest Nuxt already adds them for us, the only thing we need is to add <code>loose</code> parameter to <code>@nuxt/babel-preset-app</code>. Just add this to nuxt-config</p>
-				<pre><code class="language-js">  build: {
-    <span class="hljs-attr">babel</span>: {
-      presets({ isServer }) {
-        <span class="hljs-keyword">return</span> [
-          [
-            <span class="hljs-string">"@nuxt/babel-preset-app"</span>, { <span class="hljs-attr">loose</span>: <span class="hljs-literal">true</span> }
-          ]
-        ]
-      }
-    }
-  }</code></pre>
+				<p>It works out of the box with Nuxt JS.</p>
 				<a href="#nuxt-ts-instructions" id="nuxt-ts-instructions" style="color: inherit; text-decoration: none;">
 					<h3>Nuxt TS Instructions</h3>
 				</a>
@@ -156,7 +152,7 @@
 							<li>Module,</li>
 							<li>getModule,</li>
 							<li>VuexModule,</li>
-							<li>VuexMutation (<code>Mutation</code> from original renamed to avoid conflict with    &#39;vuex-class&#39; one),</li>
+							<li>VuexMutation (<code>Mutation</code> from original renamed to avoid conflict with &#39;vuex-class&#39; one),</li>
 							<li>MutationAction,</li>
 							<li>VuexAction (<code>Action</code> from original renamed to avoid conflict with &#39;vuex-class&#39; one),</li>
 						</ul>
@@ -197,11 +193,12 @@
 					<li><code>transition</code></li>
 					<li><code>validate</code></li>
 					<li><code>watchQuery</code></li>
-					<li><code>meta</code>
-						<a href="#vue-class-hooks" id="vue-class-hooks" style="color: inherit; text-decoration: none;">
-							<h3>Vue-class Hooks</h3>
-						</a>
-					</li>
+					<li><code>meta</code></li>
+				</ul>
+				<a href="#vue-class-hooks" id="vue-class-hooks" style="color: inherit; text-decoration: none;">
+					<h3>Vue-class Hooks</h3>
+				</a>
+				<ul>
 					<li><code>data</code></li>
 					<li><code>beforeCreate</code></li>
 					<li><code>created</code></li>
@@ -220,25 +217,32 @@
 				<a href="#usage" id="usage" style="color: inherit; text-decoration: none;">
 					<h2>Usage</h2>
 				</a>
-				<pre><code class="language-typescript"><span class="hljs-keyword">import</span> { Component, Inject, Model, Prop, Provide, Vue, Watch } <span class="hljs-keyword">from</span> <span class="hljs-string">'nuxt-property-decorator'</span>
+				<pre><code class="language-typescript"><span class="hljs-keyword">import</span> {
+  Component,
+  Inject,
+  Model,
+  Prop,
+  Provide,
+  Vue,
+  Watch,
+} <span class="hljs-keyword">from</span> <span class="hljs-string">"nuxt-property-decorator"</span>
 
-<span class="hljs-keyword">const</span> s = Symbol(<span class="hljs-string">'baz'</span>)
+<span class="hljs-keyword">const</span> s = Symbol(<span class="hljs-string">"baz"</span>)
 
 <span class="hljs-meta">@Component</span>({
-  components: { comp }
+  components: { comp },
 })
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> MyComponent <span class="hljs-keyword">extends</span> Vue {
-
   <span class="hljs-meta">@Inject</span>() foo!: <span class="hljs-built_in">string</span>
-  <span class="hljs-meta">@Inject</span>(<span class="hljs-string">'bar'</span>) bar!: <span class="hljs-built_in">string</span>
+  <span class="hljs-meta">@Inject</span>(<span class="hljs-string">"bar"</span>) bar!: <span class="hljs-built_in">string</span>
   <span class="hljs-meta">@Inject</span>(s) baz!: <span class="hljs-built_in">string</span>
 
-  <span class="hljs-meta">@Model</span>(<span class="hljs-string">'change'</span>) checked!: <span class="hljs-built_in">boolean</span>
+  <span class="hljs-meta">@Model</span>(<span class="hljs-string">"change"</span>) checked!: <span class="hljs-built_in">boolean</span>
 
   <span class="hljs-meta">@Prop</span>()
   propA!: <span class="hljs-built_in">number</span>
 
-  <span class="hljs-meta">@Prop</span>({ <span class="hljs-keyword">default</span>: <span class="hljs-string">'default value'</span> })
+  <span class="hljs-meta">@Prop</span>({ <span class="hljs-keyword">default</span>: <span class="hljs-string">"default value"</span> })
   propB!: <span class="hljs-built_in">string</span>
 
   <span class="hljs-meta">@Prop</span>([<span class="hljs-built_in">String</span>, <span class="hljs-built_in">Boolean</span>])
@@ -247,80 +251,79 @@
   <span class="hljs-meta">@Prop</span>({ <span class="hljs-keyword">type</span>: <span class="hljs-literal">null</span> })
   propD!: <span class="hljs-built_in">any</span>
 
-  <span class="hljs-meta">@Provide</span>() foo = <span class="hljs-string">'foo'</span>
-  <span class="hljs-meta">@Provide</span>(<span class="hljs-string">'bar'</span>) baz = <span class="hljs-string">'bar'</span>
+  <span class="hljs-meta">@Provide</span>() foo = <span class="hljs-string">"foo"</span>
+  <span class="hljs-meta">@Provide</span>(<span class="hljs-string">"bar"</span>) baz = <span class="hljs-string">"bar"</span>
 
-  <span class="hljs-meta">@Watch</span>(<span class="hljs-string">'child'</span>)
-  onChildChanged(val: <span class="hljs-built_in">string</span>, oldVal: <span class="hljs-built_in">string</span>) { }
+  <span class="hljs-meta">@Watch</span>(<span class="hljs-string">"child"</span>)
+  onChildChanged(val: <span class="hljs-built_in">string</span>, oldVal: <span class="hljs-built_in">string</span>) {}
 
-  <span class="hljs-meta">@Watch</span>(<span class="hljs-string">'person'</span>, { immediate: <span class="hljs-literal">true</span>, deep: <span class="hljs-literal">true</span> })
-  onPersonChanged(val: Person, oldVal: Person) { }
+  <span class="hljs-meta">@Watch</span>(<span class="hljs-string">"person"</span>, { immediate: <span class="hljs-literal">true</span>, deep: <span class="hljs-literal">true</span> })
+  onPersonChanged(val: Person, oldVal: Person) {}
 
-  beforeRouteLeave (to, <span class="hljs-keyword">from</span>, next) {
+  beforeRouteLeave(to, <span class="hljs-keyword">from</span>, next) {
     <span class="hljs-comment">// called when the route that renders this component is about to</span>
     <span class="hljs-comment">// be navigated away from.</span>
     <span class="hljs-comment">// has access to `this` component instance.</span>
   }
-}
-</code></pre>
+}</code></pre>
 				<p>is equivalent to</p>
-				<pre><code class="language-js"><span class="hljs-keyword">const</span> s = <span class="hljs-built_in">Symbol</span>(<span class="hljs-string">'baz'</span>)
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> s = <span class="hljs-built_in">Symbol</span>(<span class="hljs-string">"baz"</span>)
 
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> MyComponent = Vue.extend({
-  <span class="hljs-attr">name</span>: <span class="hljs-string">'MyComponent'</span>,
+  <span class="hljs-attr">name</span>: <span class="hljs-string">"MyComponent"</span>,
   <span class="hljs-attr">components</span>: { comp },
   <span class="hljs-attr">inject</span>: {
-    <span class="hljs-attr">foo</span>: <span class="hljs-string">'foo'</span>,
-    <span class="hljs-attr">bar</span>: <span class="hljs-string">'bar'</span>,
-    [s]: s
+    <span class="hljs-attr">foo</span>: <span class="hljs-string">"foo"</span>,
+    <span class="hljs-attr">bar</span>: <span class="hljs-string">"bar"</span>,
+    [s]: s,
   },
   <span class="hljs-attr">model</span>: {
-    <span class="hljs-attr">prop</span>: <span class="hljs-string">'checked'</span>,
-    <span class="hljs-attr">event</span>: <span class="hljs-string">'change'</span>
+    <span class="hljs-attr">prop</span>: <span class="hljs-string">"checked"</span>,
+    <span class="hljs-attr">event</span>: <span class="hljs-string">"change"</span>,
   },
   <span class="hljs-attr">props</span>: {
-    <span class="hljs-attr">checked</span>: <span class="hljs-built_in">Boolean</span>,
-    <span class="hljs-attr">propA</span>: <span class="hljs-built_in">Number</span>,
+    <span class="hljs-attr">checked</span>: <span class="hljs-built_in">Boolean</span>,
+    <span class="hljs-attr">propA</span>: <span class="hljs-built_in">Number</span>,
     <span class="hljs-attr">propB</span>: {
       <span class="hljs-attr">type</span>: <span class="hljs-built_in">String</span>,
-      <span class="hljs-attr">default</span>: <span class="hljs-string">'default value'</span>
+      <span class="hljs-attr">default</span>: <span class="hljs-string">"default value"</span>,
     },
     <span class="hljs-attr">propC</span>: [<span class="hljs-built_in">String</span>, <span class="hljs-built_in">Boolean</span>],
-    <span class="hljs-attr">propD</span>: { <span class="hljs-attr">type</span>: <span class="hljs-literal">null</span> }
+    <span class="hljs-attr">propD</span>: { <span class="hljs-attr">type</span>: <span class="hljs-literal">null</span> },
   },
-  data () {
+  data() {
     <span class="hljs-keyword">return</span> {
-      <span class="hljs-attr">foo</span>: <span class="hljs-string">'foo'</span>,
-      <span class="hljs-attr">baz</span>: <span class="hljs-string">'bar'</span>
+      <span class="hljs-attr">foo</span>: <span class="hljs-string">"foo"</span>,
+      <span class="hljs-attr">baz</span>: <span class="hljs-string">"bar"</span>,
     }
   },
-  provide () {
+  provide() {
     <span class="hljs-keyword">return</span> {
       <span class="hljs-attr">foo</span>: <span class="hljs-keyword">this</span>.foo,
-      <span class="hljs-attr">bar</span>: <span class="hljs-keyword">this</span>.baz
+      <span class="hljs-attr">bar</span>: <span class="hljs-keyword">this</span>.baz,
     }
   },
   <span class="hljs-attr">methods</span>: {
-    onChildChanged(val, oldVal) { },
-    onPersonChanged(val, oldVal) { }
+    onChildChanged(val, oldVal) {},
+    onPersonChanged(val, oldVal) {},
   },
-  beforeRouteLeave (to, <span class="hljs-keyword">from</span>, next) {
+  beforeRouteLeave(to, <span class="hljs-keyword">from</span>, next) {
     <span class="hljs-comment">// called when the route that renders this component is about to</span>
     <span class="hljs-comment">// be navigated away from.</span>
     <span class="hljs-comment">// has access to `this` component instance.</span>
   },
   <span class="hljs-attr">watch</span>: {
-    <span class="hljs-string">'child'</span>: {
-      <span class="hljs-attr">handler</span>: <span class="hljs-string">'onChildChanged'</span>,
+    <span class="hljs-attr">child</span>: {
+      <span class="hljs-attr">handler</span>: <span class="hljs-string">"onChildChanged"</span>,
       <span class="hljs-attr">immediate</span>: <span class="hljs-literal">false</span>,
-      <span class="hljs-attr">deep</span>: <span class="hljs-literal">false</span>
+      <span class="hljs-attr">deep</span>: <span class="hljs-literal">false</span>,
     },
-    <span class="hljs-string">'person'</span>: {
-      <span class="hljs-attr">handler</span>: <span class="hljs-string">'onPersonChanged'</span>,
+    <span class="hljs-attr">person</span>: {
+      <span class="hljs-attr">handler</span>: <span class="hljs-string">"onPersonChanged"</span>,
       <span class="hljs-attr">immediate</span>: <span class="hljs-literal">true</span>,
-      <span class="hljs-attr">deep</span>: <span class="hljs-literal">true</span>
-    }
-  }
+      <span class="hljs-attr">deep</span>: <span class="hljs-literal">true</span>,
+    },
+  },
 })</code></pre>
 				<p>As you can see at <code>propA</code> and <code>propB</code>, the type can be inferred automatically when it&#39;s a simple type. For more complex types like enums you do need to specify it specifically.
 				Also this library needs to have <code>emitDecoratorMetadata</code> set to <code>true</code> for this to work.</p>

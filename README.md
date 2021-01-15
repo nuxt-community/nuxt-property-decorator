@@ -61,11 +61,13 @@ There are following decorators:
   - [`@Inject`](https://github.com/kaorun343/vue-property-decorator/#Provide)
   - [`@InjectReactive`](https://github.com/kaorun343/vue-property-decorator/#ProvideReactive)
   - [`@Model`](https://github.com/kaorun343/vue-property-decorator/#Model)
+  - [`@ModelSync`](https://github.com/kaorun343/vue-property-decorator#-modelsyncpropname-string-event-string-options-propoptions--constructor--constructor---decorator)
   - [`@Prop`](https://github.com/kaorun343/vue-property-decorator/#Prop)
   - [`@PropSync`](https://github.com/kaorun343/vue-property-decorator/#PropSync)
   - [`@Provide`](https://github.com/kaorun343/vue-property-decorator/#Provide)
   - [`@ProvideReactive`](https://github.com/kaorun343/vue-property-decorator/#ProvideReactive)
   - [`@Ref`](https://github.com/kaorun343/vue-property-decorator/#Ref)
+  - [`@VModel`](https://github.com/kaorun343/vue-property-decorator#-vmodelpropsargs-propoptions-decorator)
   - [`@Watch`](https://github.com/kaorun343/vue-property-decorator/#Watch)
 
 - **exported from** [`vuex-class`](https://github.com/ktsn/vuex-class)

@@ -102,6 +102,7 @@
 								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_nuxt_property_decorator_.html#inject" class="tsd-kind-icon">Inject</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_nuxt_property_decorator_.html#injectreactive" class="tsd-kind-icon">Inject<wbr>Reactive</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_nuxt_property_decorator_.html#model" class="tsd-kind-icon">Model</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_nuxt_property_decorator_.html#modelsync" class="tsd-kind-icon">Model<wbr>Sync</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter"><a href="_nuxt_property_decorator_.html#module" class="tsd-kind-icon">Module</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter"><a href="_nuxt_property_decorator_.html#mutation" class="tsd-kind-icon">Mutation</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter"><a href="_nuxt_property_decorator_.html#mutationaction" class="tsd-kind-icon">Mutation<wbr>Action</a></li>
@@ -114,6 +115,7 @@
 								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_nuxt_property_decorator_.html#provide" class="tsd-kind-icon">Provide</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_nuxt_property_decorator_.html#providereactive" class="tsd-kind-icon">Provide<wbr>Reactive</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_nuxt_property_decorator_.html#ref" class="tsd-kind-icon">Ref</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_nuxt_property_decorator_.html#vmodel" class="tsd-kind-icon">VModel</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_nuxt_property_decorator_.html#watch" class="tsd-kind-icon">Watch</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter"><a href="_nuxt_property_decorator_.html#getmodule" class="tsd-kind-icon">get<wbr>Module</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter"><a href="_nuxt_property_decorator_.html#mixins" class="tsd-kind-icon">mixins</a></li>
@@ -131,7 +133,7 @@
 					<div class="tsd-signature tsd-kind-icon">Constructor<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>constructor<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> }</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/nuxt-community/nuxt-property-decorator/blob/353380a/src/nuxt-property-decorator.ts#L58">src/nuxt-property-decorator.ts:58</a></li>
+							<li>Defined in <a href="https://github.com/nuxt-community/nuxt-property-decorator/blob/c5a288f/src/nuxt-property-decorator.ts#L58">src/nuxt-property-decorator.ts:58</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -148,7 +150,7 @@
 									<li class="tsd-description">
 										<aside class="tsd-sources">
 											<ul>
-												<li>Defined in <a href="https://github.com/nuxt-community/nuxt-property-decorator/blob/353380a/src/nuxt-property-decorator.ts#L58">src/nuxt-property-decorator.ts:58</a></li>
+												<li>Defined in <a href="https://github.com/nuxt-community/nuxt-property-decorator/blob/c5a288f/src/nuxt-property-decorator.ts#L58">src/nuxt-property-decorator.ts:58</a></li>
 											</ul>
 										</aside>
 										<h4 class="tsd-parameters-title">Parameters</h4>
@@ -432,6 +434,71 @@
 						</li>
 					</ul>
 				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="modelsync" class="tsd-anchor"></a>
+					<h3>Model<wbr>Sync</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">Model<wbr>Sync<span class="tsd-signature-symbol">(</span>propName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, event<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">PropOptions</span><span class="tsd-signature-symbol"> | </span><a href="_nuxt_property_decorator_.html#constructor" class="tsd-signature-type">Constructor</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><a href="_nuxt_property_decorator_.html#constructor" class="tsd-signature-type">Constructor</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>target<span class="tsd-signature-symbol">: </span><a href="../interfaces/_nuxt_property_decorator_.vue.html" class="tsd-signature-type">Vue</a>, key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in node_modules/vue-property-decorator/lib/decorators/ModelSync.d.ts:10</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>decorator of synced model and prop</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>propName: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>the name to interface with from outside, must be different from decorated property</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> event: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>event name</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <span class="tsd-signature-type">PropOptions</span><span class="tsd-signature-symbol"> | </span><a href="_nuxt_property_decorator_.html#constructor" class="tsd-signature-type">Constructor</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><a href="_nuxt_property_decorator_.html#constructor" class="tsd-signature-type">Constructor</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>options</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">(</span>target<span class="tsd-signature-symbol">: </span><a href="../interfaces/_nuxt_property_decorator_.vue.html" class="tsd-signature-type">Vue</a>, key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span></h4>
+							<p>PropertyDecorator</p>
+							<ul class="tsd-parameters">
+								<li class="tsd-parameter-signature">
+									<ul class="tsd-signatures tsd-kind-type-literal">
+										<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>target<span class="tsd-signature-symbol">: </span><a href="../interfaces/_nuxt_property_decorator_.vue.html" class="tsd-signature-type">Vue</a>, key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+									</ul>
+									<ul class="tsd-descriptions">
+										<li class="tsd-description">
+											<h4 class="tsd-parameters-title">Parameters</h4>
+											<ul class="tsd-parameters">
+												<li>
+													<h5>target: <a href="../interfaces/_nuxt_property_decorator_.vue.html" class="tsd-signature-type">Vue</a></h5>
+												</li>
+												<li>
+													<h5>key: <span class="tsd-signature-type">string</span></h5>
+												</li>
+											</ul>
+											<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
 					<a name="module" class="tsd-anchor"></a>
 					<h3>Module</h3>
@@ -615,7 +682,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/nuxt-community/nuxt-property-decorator/blob/353380a/src/nuxt-property-decorator.ts#L143">src/nuxt-property-decorator.ts:143</a></li>
+									<li>Defined in <a href="https://github.com/nuxt-community/nuxt-property-decorator/blob/c5a288f/src/nuxt-property-decorator.ts#L143">src/nuxt-property-decorator.ts:143</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -647,7 +714,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/nuxt-community/nuxt-property-decorator/blob/353380a/src/nuxt-property-decorator.ts#L72">src/nuxt-property-decorator.ts:72</a></li>
+									<li>Defined in <a href="https://github.com/nuxt-community/nuxt-property-decorator/blob/c5a288f/src/nuxt-property-decorator.ts#L72">src/nuxt-property-decorator.ts:72</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -684,7 +751,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/nuxt-community/nuxt-property-decorator/blob/353380a/src/nuxt-property-decorator.ts#L99">src/nuxt-property-decorator.ts:99</a></li>
+									<li>Defined in <a href="https://github.com/nuxt-community/nuxt-property-decorator/blob/c5a288f/src/nuxt-property-decorator.ts#L99">src/nuxt-property-decorator.ts:99</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -715,7 +782,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/nuxt-community/nuxt-property-decorator/blob/353380a/src/nuxt-property-decorator.ts#L120">src/nuxt-property-decorator.ts:120</a></li>
+									<li>Defined in <a href="https://github.com/nuxt-community/nuxt-property-decorator/blob/c5a288f/src/nuxt-property-decorator.ts#L120">src/nuxt-property-decorator.ts:120</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -936,6 +1003,37 @@
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> refKey: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>the ref key defined in template</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">VueDecorator</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="vmodel" class="tsd-anchor"></a>
+					<h3>VModel</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">VModel<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">PropOptions</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">VueDecorator</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in node_modules/vue-property-decorator/lib/decorators/VModel.d.ts:6</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>decorator for capturings v-model binding to component</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <span class="tsd-signature-type">PropOptions</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>the options for the prop</p>
 									</div>
 								</li>
 							</ul>
@@ -1320,6 +1418,9 @@
 					<li class=" tsd-kind-function tsd-parent-kind-module">
 						<a href="_nuxt_property_decorator_.html#model" class="tsd-kind-icon">Model</a>
 					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="_nuxt_property_decorator_.html#modelsync" class="tsd-kind-icon">Model<wbr>Sync</a>
+					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
 						<a href="_nuxt_property_decorator_.html#module" class="tsd-kind-icon">Module</a>
 					</li>
@@ -1355,6 +1456,9 @@
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module">
 						<a href="_nuxt_property_decorator_.html#ref" class="tsd-kind-icon">Ref</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="_nuxt_property_decorator_.html#vmodel" class="tsd-kind-icon">VModel</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module">
 						<a href="_nuxt_property_decorator_.html#watch" class="tsd-kind-icon">Watch</a>

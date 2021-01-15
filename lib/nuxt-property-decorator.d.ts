@@ -3,7 +3,7 @@ import Component, { mixins } from "vue-class-component";
 export { Vue, Component, mixins };
 export { Module, getModule, VuexModule, Mutation as VuexMutation, MutationAction, Action as VuexAction, } from "vuex-module-decorators";
 export { State, Getter, Action, Mutation, namespace } from "vuex-class";
-export { Emit, Inject, InjectReactive, Model, Prop, PropSync, Provide, ProvideReactive, Ref, Watch, } from "vue-property-decorator";
+export { Emit, Inject, InjectReactive, Model, ModelSync, Prop, PropSync, Provide, ProvideReactive, Ref, VModel, Watch, } from "vue-property-decorator";
 /**
  * @public
  */

@@ -13,6 +13,7 @@ import { Inject } from 'vue-property-decorator';
 import { InjectReactive } from 'vue-property-decorator';
 import { mixins } from 'vue-class-component';
 import { Model } from 'vue-property-decorator';
+import { ModelSync } from 'vue-property-decorator';
 import { Module } from 'vuex-module-decorators';
 import { Mutation } from 'vuex-class';
 import { MutationAction } from 'vuex-module-decorators';
@@ -23,6 +24,7 @@ import { Provide } from 'vue-property-decorator';
 import { ProvideReactive } from 'vue-property-decorator';
 import { Ref } from 'vue-property-decorator';
 import { State } from 'vuex-class';
+import { VModel } from 'vue-property-decorator';
 import { default as Vue_2 } from 'vue';
 import { Action as VuexAction } from 'vuex-module-decorators';
 import { VuexModule } from 'vuex-module-decorators';
@@ -51,6 +53,8 @@ export { InjectReactive }
 export { mixins }
 
 export { Model }
+
+export { ModelSync }
 
 export { Module }
 
@@ -83,6 +87,8 @@ export { ProvideReactive }
 export { Ref }
 
 export { State }
+
+export { VModel }
 
 export { Vue_2 as Vue }
 

@@ -31,23 +31,23 @@ export {
   VuexModule,
   Mutation as VuexMutation,
   MutationAction,
-  Action as VuexAction,
-} from // config,
-"vuex-module-decorators"
+  Action as VuexAction, // config,
+} from "vuex-module-decorators"
 export { State, Getter, Action, Mutation, namespace } from "vuex-class"
 export {
   /*Component,*/ Emit,
   Inject,
   InjectReactive,
   Model,
+  ModelSync,
   Prop,
   PropSync,
   Provide,
   ProvideReactive,
   Ref,
+  VModel,
   Watch /*, Vue, Mixins */,
 } from "vue-property-decorator"
-
 
 // const Component = require('nuxt-class-component');
 // const { createDecorator } = require('nuxt-class-component');

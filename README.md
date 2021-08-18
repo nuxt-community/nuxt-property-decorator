@@ -48,10 +48,10 @@ It works out of the box with Nuxt TS.
 There are following decorators:
 
 - **Nuxt specific decorators**
-- `@Off` - decorator of \$off
-- `@On`- decorator of \$on
-- `@Once`- decorator of \$once
-- `@NextTick` -decorator of \$nextTick
+  - `@Off` - decorator of \$off
+  - `@On`- decorator of \$on
+  - `@Once`- decorator of \$once
+  - `@NextTick` -decorator of \$nextTick
 
 - **exported from** [`vue-class-component`](https://github.com/vuejs/vue-class-component)
   - `@Component`

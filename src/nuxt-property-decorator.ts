@@ -11,6 +11,7 @@ Component.registerHooks([
   "asyncData",
   "fetch",
   "fetchOnServer",
+  "fetchDelay",
   "head",
   "key",
   "layout",

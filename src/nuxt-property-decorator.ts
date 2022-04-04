@@ -1,6 +1,6 @@
 "use strict"
 
-import Vue, { PropOptions, WatchOptions } from "vue"
+import Vue, { PropOptions, PropType, WatchOptions } from "vue"import Vue, { PropOptions, PropType, WatchOptions } from "vue"
 
 import Component, { createDecorator, mixins } from "vue-class-component"
 
@@ -23,7 +23,7 @@ Component.registerHooks([
   "meta",
 ])
 
-export { Vue, Component, mixins }
+export { Vue, Component, mixins, PropType }
 
 export {
   Module,

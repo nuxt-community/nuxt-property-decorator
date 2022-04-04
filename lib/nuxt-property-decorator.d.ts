@@ -1,6 +1,6 @@
 import Vue from "vue";
-import Component, { mixins } from "vue-class-component";
-export { Vue, Component, mixins };
+import Component, { mixins, PropType } from "vue-class-component";
+export { Vue, Component, mixins, PropType };
 export { Module, getModule, VuexModule, Mutation as VuexMutation, MutationAction, Action as VuexAction, } from "vuex-module-decorators";
 export { State, Getter, Action, Mutation, namespace } from "vuex-class";
 export { Emit, Inject, InjectReactive, Model, ModelSync, Prop, PropSync, Provide, ProvideReactive, Ref, VModel, Watch, } from "vue-property-decorator";

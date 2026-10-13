@@ -1,3 +1,6 @@
+> [!NOTE]
+> This repository is archived. `nuxt-property-decorator` was built for Nuxt 2, which reached end of life on June 30, 2024.
+
 # Nuxt Property Decorator
 
 <p align="center">
